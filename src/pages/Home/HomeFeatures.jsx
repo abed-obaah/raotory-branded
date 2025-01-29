@@ -1,24 +1,5 @@
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 import ButtonRoundedSolid from '../../components/ButtonRoundedSolid'
-
-const features = [
-  {
-    name: 'Push to deploy.',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: CloudArrowUpIcon,
-  },
-  {
-    name: 'SSL certificates.',
-    description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
-    icon: LockClosedIcon,
-  },
-  {
-    name: 'Database backups.',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: ServerIcon,
-  },
-]
+import ShieldCheckmarkIcon from "../../assets/shield-checkmark-icon.svg";
 
 export default function HomeFeatures() {
   return (
@@ -42,7 +23,26 @@ export default function HomeFeatures() {
             </div>
 
             {/* Right side */}
-            <div className='flex-1 bg-amber-200'>
+            <div className='flex-1'>
+
+                {/* Card 01 */}
+                <div class="flex flex-col items-center gap-3 max-w-3xs px-3.5 py-4.5 text-center bg-white border border-black-10-percent rounded-[46px] dark:bg-white dark:border-black-10-percent">
+                    <h5 class="text-lg font-medium text-gray-600 dark:text-gray-600">
+                        Real-Time Inventory Tracking
+                    </h5>
+                    <div>
+                        <img
+                            alt="Shield icon"
+                            src={ShieldCheckmarkIcon}
+                            width={"100%"}
+                            height={"100%"}
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
+                    <p class="text-sm font-normal text-gray-600 dark:text-gray-600">
+                        Track your stock levels across multiple locations in real-time, so you never run out of the products your customers need.
+                    </p>
+                </div>
 
             </div>
         </div>
