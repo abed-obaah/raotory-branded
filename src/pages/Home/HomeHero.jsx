@@ -5,8 +5,8 @@ export default function HomeHero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <section className="pt-24">
-        <div className="text-center max-w-6xl mx-auto">
+    <section className="max-w-6xl mx-auto pt-24">
+        <div className="text-center">
             <h1 className="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl">
                 <span className='text-gray-600'>Manage Inventory Like a Pro:</span> From Stock to Sales, <span className='text-gray-600'>All in One Place</span>
             </h1>

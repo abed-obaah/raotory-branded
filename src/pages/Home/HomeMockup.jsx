@@ -1,69 +1,55 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import HomeMockup01 from "../../assets/home-mockup-01.png";
 import HomeMockup02 from "../../assets/home-mockup-02.png";
 
 const HomeMockup = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [scrollLocked, setScrollLocked] = useState(false);
-  const sectionRef = useRef(null);
+  const images = [HomeMockup01, HomeMockup02];
+  const timeInterval = 3000; // Time for auto-slide in milliseconds
 
+  // Automatically change slides
   useEffect(() => {
-    const handleScroll = () => {
-      if (sectionRef.current) {
-        const sectionTop = sectionRef.current.getBoundingClientRect().top;
-        const sectionHeight = sectionRef.current.offsetHeight;
-        const viewportHeight = window.innerHeight;
+    const intervalId = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+    }, timeInterval);
 
-        // Check if the section is fully in view
-        if (sectionTop <= 0 && Math.abs(sectionTop) < sectionHeight - viewportHeight / 3 && !scrollLocked) {
-          setScrollLocked(true); // Lock scrolling
-          document.body.style.overflow = "hidden"; // Prevent page scrolling
+    return () => clearInterval(intervalId); // Clean up the interval on component unmount
+  }, [images.length]);
 
-          // Switch to second image after a delay
-          setTimeout(() => {
-            setActiveIndex(1);
-
-            // Unlock scrolling after another delay
-            setTimeout(() => {
-              setScrollLocked(false);
-              document.body.style.overflow = "auto"; // Re-enable scrolling
-            }, 2000);
-          }, 1500);
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      document.body.style.overflow = "auto"; // Ensure scrolling is re-enabled on unmount
-    };
-  }, [scrollLocked]);
+  // Handle pagination click
+  const handlePaginationClick = (index) => {
+    setActiveIndex(index);
+  };
 
   return (
-    <section className="pt-24">
-      <div ref={sectionRef} className="relative w-full h-screen flex flex-col items-center justify-center">
+    <section className="max-w-6xl mx-auto pt-24">
+      <div className="relative w-full h-[800px] overflow-hidden flex justify-center items-center">
         {/* Images */}
-        <div className="relative w-full h-full overflow-hidden">
+        <div className="relative w-full h-full">
           <motion.img
-            src={HomeMockup01}
+            src={images[0]}
             alt="First Image"
-            className="absolute top-0 left-0 w-full h-[800px] object-contain transition-opacity duration-1000"
+            className="absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-1000"
             animate={{ opacity: activeIndex === 0 ? 1 : 0 }}
           />
           <motion.img
-            src={HomeMockup02}
+            src={images[1]}
             alt="Second Image"
-            className="absolute top-0 left-0 w-full h-[800px] object-contain transition-opacity duration-1000"
+            className="absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-1000"
             animate={{ opacity: activeIndex === 1 ? 1 : 0 }}
           />
         </div>
 
         {/* Pagination */}
-        <div className="absolute bottom-10 flex gap-2">
-          <div className={`h-2 w-8 rounded-full ${activeIndex === 0 ? "bg-blue-500 w-10" : "bg-gray-400 w-8"}`} />
-          <div className={`h-2 w-8 rounded-full ${activeIndex === 1 ? "bg-blue-500 w-10" : "bg-gray-400 w-8"}`} />
+        <div className="absolute bottom-10 flex gap-2 justify-center w-full">
+          {images.map((_, index) => (
+            <div
+              key={index}
+              className={`h-2 w-8 rounded-full cursor-pointer ${activeIndex === index ? "bg-blue-500 w-16" : "bg-gray-400 w-6"}`}
+              onClick={() => handlePaginationClick(index)}
+            />
+          ))}
         </div>
       </div>
     </section>
