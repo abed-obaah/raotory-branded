@@ -1,4 +1,5 @@
 import Navbar from "../../components/Navbar";
+import TopBrands from "../../components/TopBrands";
 import HomeHero from "./HomeHero";
 import HomeMockup from "./HomeMockup";
 
@@ -14,11 +15,9 @@ export default function Home() {
             {/* Mockup section */}
             <HomeMockup />
 
-            {/* Hero section */}
-            <HomeHero />            
-            {/* Hero section */}
-            <HomeHero />
-            
+            {/* Top brands section */}
+            <TopBrands />
+
         </main>
     )
 }
