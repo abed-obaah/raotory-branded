@@ -26,17 +26,17 @@ export default function HomeFeatures() {
         <div className="flex">
             {/* Left side */}
             <div className="flex flex-col flex-1">
-                <h2 className="text-base/7 font-semibold text-gray-600">
+                <h2 className="text-3xl text-gray-600 opacity-50">
                     Features
                 </h2>
-                <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
+                <p className="mt-2 max-w-md text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
                     Why manage your inventory with Raotory?
                 </p>
-                <p className="mt-6 text-lg/8 text-gray-600">
+                <p className="mt-6 text-3xl text-gray-600 opacity-50">
                     We empower businesses to achieve operational efficiency and growth by providing them with intelligent, easy-to-use inventory management solutions.
                 </p>
                 {/* Button */}
-                <div className='flex'>
+                <div className='flex mt-10'>
                     <ButtonRoundedSolid text="Get Started" href="#" />
                 </div>
             </div>
