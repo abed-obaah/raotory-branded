@@ -154,8 +154,8 @@ export default function TestimonialCarousel() {
           transition={{ duration: 0.5 }}
           className="mt-4"
         >
-          {/* Reviews */}
-          <p className="text-[40px] text-gray-600 leading-12 font-normal">"{testimonials[index].review}"</p>
+          {/* Client review */}
+          <p className="text-4xl text-gray-600 leading-12 font-normal">"{testimonials[index].review}"</p>
           {/* Stars */}
           <div className="flex justify-center mt-4 text-yellow-ffe26f text-[2.5rem] space-x-4">
             {Array(5)
