@@ -5,7 +5,7 @@ import ButtonSquareSolid from "../../components/ButtonSquareSolid";
 export default function HomePricing() {
     return (
         <section class="max-w-6xl mx-auto pt-24">
-            <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+            <div>
                 {/* Heading */}
                 <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
                     <h2 className="text-3xl text-gray-600 opacity-50">
