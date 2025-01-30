@@ -59,7 +59,10 @@ export default function HomePricing() {
                         <ButtonSquareSolid text="Get Started" href="#" />
                     </div>
                     {/* Pricing Card 02 */}
-                    <div class="flex flex-col p-6 mx-auto max-w-[352px] text-gray-0d0d0d bg-white rounded-[20px] border border-black-10-percent shadow dark:border-black-10-percent dark:bg-white dark:text-gray-0d0d0d">
+                    <div 
+                        style={{ background: "linear-gradient(180deg, #8FD7FF 0%, rgba(126, 184, 217, 0.398242) 43.59%, rgba(118, 169, 198, 0.1165) 64%, rgba(7, 77, 116, 0.05) 100%)" }} 
+                        className="flex flex-col p-6 mx-auto max-w-[352px] text-gray-0d0d0d bg-white rounded-[20px] border border-black-10-percent shadow dark:border-black-10-percent dark:bg-white dark:text-gray-0d0d0d"
+                    >
                         {/* Plan icon */}
                         <div className="flex items-center justify-center border border-black-10-percent rounded-full size-10 mb-6">
                             <MdFlashOn className="size-7.5 text-gray-0d0d0d" />
