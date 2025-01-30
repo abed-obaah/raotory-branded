@@ -1,6 +1,7 @@
 import { MdFlashOn } from "react-icons/md";
 import { IoIosListBox } from "react-icons/io";
 import ButtonSquareSolid from "../../components/ButtonSquareSolid";
+import { IoDiamondOutline } from "react-icons/io5";
 
 export default function HomePricing() {
     return (
@@ -65,7 +66,7 @@ export default function HomePricing() {
                     >
                         {/* Plan icon */}
                         <div className="flex items-center justify-center border border-black-10-percent rounded-full size-10 mb-6">
-                            <MdFlashOn className="size-7.5 text-gray-0d0d0d" />
+                            <IoDiamondOutline className="size-7.5 text-gray-0d0d0d" />
                         </div>
                         {/* Plan title */}
                         <h3 class="mb-2 text-2xl font-semibold">
