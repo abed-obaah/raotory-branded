@@ -4,6 +4,7 @@ import TopBrands from "../../components/TopBrands";
 import HomeFeatures from "./HomeFeatures";
 import HomeHero from "./HomeHero";
 import HomeMockup from "./HomeMockup";
+import HomePricing from "./HomePricing";
 
 export default function Home() {
     return (
@@ -25,6 +26,9 @@ export default function Home() {
 
             {/* Testimonial section */}
             <TestimonialCarousel />
+
+            {/* Pricing section */}
+            <HomePricing />
 
         </main>
     )
