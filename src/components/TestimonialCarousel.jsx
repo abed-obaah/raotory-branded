@@ -9,44 +9,44 @@ import AvatarTemp04 from "../assets/avatar-temp-04.png";
 const testimonials = [
   {
     image: AvatarTemp01,
-    review: "01 This service exceeded my expectations. Highly recommend!",
+    review: "01 This inventory management system has transformed the way we handle our stock. The real-time tracking and automated alerts have significantly reduced our overhead costs.",
     name: "John Doe",
     position: "CEO, TechCorp",
   },
   {
     image: AvatarTemp02,
-    review: "02 Excellent work! Professional and timely delivery.",
+    review: "02 This inventory management system has transformed the way we handle our stock. The real-time tracking and automated alerts have significantly reduced our overhead costs.",
     name: "Jane Smith",
     position: "Marketing Manager, InnovateX",
   },
   {
     image: AvatarTemp03,
-    review: "03 A pleasure to work with. Will hire again.",
+    review: "03 This inventory management system has transformed the way we handle our stock. The real-time tracking and automated alerts have significantly reduced our overhead costs.",
     name: "Alex Johnson",
     position: "Founder, Startup Hub",
   },
   {
     image: AvatarTemp04,
-    review: "04 Great customer service and outstanding results!",
+    review: "04 This inventory management system has transformed the way we handle our stock. The real-time tracking and automated alerts have significantly reduced our overhead costs.",
     name: "Chris Williams",
     position: "COO, FinTech Solutions",
   },
   {
     image: AvatarTemp01,
-    review: "05 Truly a game changer for our business!",
+    review: "05 This inventory management system has transformed the way we handle our stock. The real-time tracking and automated alerts have significantly reduced our overhead costs.",
     name: "Emma Brown",
     position: "Head of Operations, E-Shopify",
   },
   {
     image: AvatarTemp02,
-    review: "06 Truly a game changer for our business!",
-    name: "Emma Brown",
+    review: "06 This inventory management system has transformed the way we handle our stock. The real-time tracking and automated alerts have significantly reduced our overhead costs.",
+    name: "Ben White",
     position: "Head of Operations, E-Shopify",
   },
   {
     image: AvatarTemp03,
-    review: "07 Truly a game changer for our business!",
-    name: "Emma Brown",
+    review: "07 This inventory management system has transformed the way we handle our stock. The real-time tracking and automated alerts have significantly reduced our overhead costs.",
+    name: "Von Green",
     position: "Head of Operations, E-Shopify",
   }
 ];
@@ -83,7 +83,7 @@ export default function TestimonialCarousel() {
   return (
     <section className="max-w-6xl mx-auto pt-24">
       {/* Heading */}
-      <div className="mb-16">
+      <div className="mb-10">
           <h2 className="text-3xl text-gray-600 opacity-50 text-center">
               Testimonials
           </h2>
@@ -92,12 +92,16 @@ export default function TestimonialCarousel() {
           </p>
       </div>
       {/* Carousel */}
-      <div className="flex flex-col items-center w-full max-w-xl mx-auto text-center">
-        {/* Image Carousel */}
+      <div className="flex flex-col items-center w-full max-w-6xl mx-auto text-center">
         <div className="relative flex items-center gap-4 overflow-hidden w-full py-4">
+
+          {/* Left navigation button */}
           <button
             className={cn(
-              "absolute left-0 p-2 text-gray-500 rounded-full disabled:opacity-50",
+              "absolute left-0 p-5 rounded-full transition-colors",
+              index === 0
+                ? "bg-gray-300 text-black cursor-not-allowed"  // Disabled state
+                : "bg-blue-500 text-white hover:bg-blue-400",   // Active state
               index === 0 && "cursor-not-allowed"
             )}
             onClick={prevTestimonial}
@@ -106,7 +110,7 @@ export default function TestimonialCarousel() {
             <FaChevronLeft size={24} />
           </button>
 
-          <div className="flex gap-2 justify-center items-center w-full">
+          <div className="flex gap-10 justify-center items-center w-full">
             {visibleTestimonials.map((testimonial, i) => {
               const isActive = testimonials.indexOf(testimonial) === index;
 
@@ -116,18 +120,22 @@ export default function TestimonialCarousel() {
                   src={testimonial.image}
                   alt={testimonial.name}
                   className={cn(
-                    "w-16 h-16 rounded-full cursor-pointer transition-all duration-300",
-                    isActive && "w-20 h-20 border-4 border-blue-500"
+                    "w-[120px] h-[120px] rounded-full cursor-pointer transition-all duration-300",
+                    isActive && "w-[150px] h-[150px] border-4 border-blue-500"
                   )}
                   onClick={() => setIndex(testimonials.indexOf(testimonial))}
                 />
               );
             })}
           </div>
-
+          
+          {/* Right navigation button */}
           <button
             className={cn(
-              "absolute right-0 p-2 text-gray-500 rounded-full disabled:opacity-50",
+              "absolute right-0 p-5 rounded-full transition-colors",
+              index === testimonials.length - 1
+                ? "bg-gray-300 text-black cursor-not-allowed"  // Disabled state
+                : "bg-blue-500 text-white hover:bg-blue-400",   // Active state
               index === testimonials.length - 1 && "cursor-not-allowed"
             )}
             onClick={nextTestimonial}
