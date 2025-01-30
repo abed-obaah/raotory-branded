@@ -1,4 +1,5 @@
 import Navbar from "../../components/Navbar";
+import TestimonialCarousel from "../../components/TestimonialCarousel";
 import TopBrands from "../../components/TopBrands";
 import HomeFeatures from "./HomeFeatures";
 import HomeHero from "./HomeHero";
@@ -21,6 +22,9 @@ export default function Home() {
 
             {/* Features section */}
             <HomeFeatures />
+
+            {/* Testimonial section */}
+            <TestimonialCarousel />
 
         </main>
     )
