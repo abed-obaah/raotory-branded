@@ -154,7 +154,9 @@ export default function TestimonialCarousel() {
           transition={{ duration: 0.5 }}
           className="mt-4"
         >
+          {/* Reviews */}
           <p className="text-[40px] text-gray-600 leading-12 font-normal">"{testimonials[index].review}"</p>
+          {/* Stars */}
           <div className="flex justify-center mt-4 text-yellow-ffe26f text-[2.5rem] space-x-4">
             {Array(5)
               .fill()
@@ -162,7 +164,9 @@ export default function TestimonialCarousel() {
                 <span key={i}>★</span>
               ))}
           </div>
+          {/* Client name */}
           <p className="mt-4 text-[2rem] font-bold">{testimonials[index].name}</p>
+          {/* Client position */}
           <p className="text-2xl text-gray-600">{testimonials[index].position}</p>
         </motion.div>
       </div>
