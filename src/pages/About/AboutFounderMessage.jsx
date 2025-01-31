@@ -13,7 +13,7 @@ export default function AboutFounderMessage() {
             {/* Bottom section */}
             <div className='flex'>
                 {/* Image and name */}
-                <div class="flex items-center gap-4 flex-1">
+                <div class="flex gap-4 flex-1">
                     <img class="size-18.5 rounded-full" src={FounderAvatar} alt="Raotori's founder's avatar" />
                     <div class="">
                         <div className="text-gray-600 text-2xl font-medium">Mr Rao</div>
