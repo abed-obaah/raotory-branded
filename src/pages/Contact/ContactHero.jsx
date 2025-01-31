@@ -8,7 +8,7 @@ export default function ContactHero() {
         {/* Section wrapper */}
         <div className="flex flex-col gap-16 max-w-6xl mx-auto">
             {/* Navbar */}
-            <div className="pt-16">
+            <div className="pt-16 z-10">
                 <Navbar />
             </div>
             {/* Lower section */}
