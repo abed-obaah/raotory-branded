@@ -5,7 +5,7 @@ export default function HomeCallToAction() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <section className="max-w-6xl mx-auto my-24">
+    <section className="max-w-6xl mx-auto mt-24">
         <div className="text-center">
             <h1 className="text-[4rem] font-semibold tracking-tight text-gray-900 leading-15">
                 <span className='text-gray-600'>Ready to Streamline Your <span className='text-gray-900'>Inventory Management?</span></span>
