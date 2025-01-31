@@ -26,7 +26,6 @@ export default function About() {
 
             {/* FAQ section */}
             <AboutFaq />
-
         </main>
     )
 }
