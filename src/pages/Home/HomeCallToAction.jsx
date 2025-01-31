@@ -7,7 +7,7 @@ export default function HomeCallToAction() {
   return (
     <section className="max-w-6xl mx-auto py-24">
         <div className="text-center">
-            <h1 className="text-[4rem] font-semibold tracking-tight text-gray-900 leading-15 max-w-5xl mx-auto">
+            <h1 className="text-[4rem] font-semibold tracking-tight text-gray-900 leading-15">
                 <span className='text-gray-600'>Ready to Streamline Your <span className='text-gray-900'>Inventory Management?</span></span>
             </h1>
             <div className="mt-11 flex items-center justify-center gap-x-5">
