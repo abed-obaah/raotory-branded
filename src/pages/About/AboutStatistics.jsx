@@ -20,12 +20,12 @@ export default function AboutStatistics() {
                     <p className='text-4xl font-semibold'>500+</p>
                     <p className='text-2xl'>Trusted businesses worldwide</p>
                 </div>
-                {/* Stat #1 */}
+                {/* Stat #2 */}
                 <div className='flex flex-col justify-end bg-gray-f1f1f1 rounded-[20px] p-9 min-h-64'>
                     <p className='text-4xl font-semibold'>500+</p>
                     <p className='text-2xl'>Trusted businesses worldwide</p>
                 </div>
-                {/* Stat #1 */}
+                {/* Stat #3 */}
                 <div className='flex flex-col justify-end bg-gray-f1f1f1 rounded-[20px] p-9 min-h-64'>
                     <p className='text-4xl font-semibold'>500+</p>
                     <p className='text-2xl'>Trusted businesses worldwide</p>
