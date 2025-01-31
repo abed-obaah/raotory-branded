@@ -107,7 +107,7 @@ const navigation = {
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.quickLinks.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-base text-white hover:text-white">
+                      <a href={item.href} className="text-base text-white hover:text-gray-300">
                         {item.name}
                       </a>
                     </li>
@@ -120,7 +120,7 @@ const navigation = {
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-base text-white hover:text-white">
+                      <a href={item.href} className="text-base text-white hover:text-gray-300">
                         {item.name}
                       </a>
                     </li>
@@ -133,7 +133,7 @@ const navigation = {
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.termsOfService.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-base text-white hover:text-white">
+                      <a href={item.href} className="text-base text-white hover:text-gray-300">
                         {item.name}
                       </a>
                     </li>
