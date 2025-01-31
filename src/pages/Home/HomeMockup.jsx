@@ -6,7 +6,7 @@ import HomeMockup02 from "../../assets/home-mockup-02.png";
 const HomeMockup = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const images = [HomeMockup01, HomeMockup02];
-  const timeInterval = 3000; // Time for auto-slide in milliseconds
+  const timeInterval = 4000; // Time for auto-slide in milliseconds
 
   // Automatically change slides
   useEffect(() => {
@@ -24,7 +24,7 @@ const HomeMockup = () => {
 
   return (
     <section className="max-w-6xl mx-auto mt-24">
-      <div className="relative w-full h-[800px] overflow-hidden flex justify-center items-center">
+      <div className="relative w-full h-[600px] flex justify-center items-center">
         {/* Images */}
         <div className="relative w-full h-full">
           <motion.img
@@ -42,7 +42,7 @@ const HomeMockup = () => {
         </div>
 
         {/* Pagination */}
-        <div className="absolute bottom-10 flex gap-2 justify-center w-full">
+        <div className="absolute -bottom-6 flex gap-2 justify-center w-full">
           {images.map((_, index) => (
             <div
               key={index}

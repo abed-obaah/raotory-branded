@@ -1,8 +1,6 @@
-import { useState } from 'react'
 import ButtonRoundedSolid from '../../components/ButtonRoundedSolid'
 
 export default function HomeHero() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
     <section className="max-w-6xl mx-auto mt-24">
