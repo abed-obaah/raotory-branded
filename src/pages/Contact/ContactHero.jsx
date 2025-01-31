@@ -34,7 +34,6 @@ export default function ContactHero() {
                 </div>
             </div>
         </div>
-
     </section>
   )
 }

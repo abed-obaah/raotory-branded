@@ -1,3 +1,4 @@
+import ContactCard from "./ContactCard";
 import ContactHero from "./ContactHero";
 
 export default function Contact() {
@@ -5,6 +6,9 @@ export default function Contact() {
         <main>
             {/* Hero section */}
             <ContactHero />
+
+            {/* Contact card section */}
+            <ContactCard />
         </main>
     )
 }
