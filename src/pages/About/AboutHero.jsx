@@ -9,14 +9,14 @@ export default function AboutHero() {
         <div className="flex items-center gap-11.5">
             {/* Left side */}
             <div className="flex flex-col flex-1">
-                <h2 className="text-3xl text-gray-600 opacity-50">
-                    Features
-                </h2>
-                <p className="mt-2 max-w-md text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
-                    Why manage your inventory with Raotory?
+                <p className="text-3xl text-gray-600 opacity-50">
+                    About Us
                 </p>
+                <h2 className="mt-2 max-w-md text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
+                    Raotory Helps You Do the best Inventory management
+                </h2>
                 <p className="mt-6 text-3xl text-gray-600 opacity-50">
-                    We empower businesses to achieve operational efficiency and growth by providing them with intelligent, easy-to-use inventory management solutions.
+                    We’re the collaborative inventory management platform of choice for 500+ companies in over 140 different countries.
                 </p>
                 {/* Button */}
                 <div className='flex mt-10'>
