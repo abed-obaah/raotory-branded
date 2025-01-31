@@ -6,7 +6,7 @@ export default function AboutFounderMessage() {
         <div className='flex flex-col gap-19'>
             {/* Top section */}
             <div className="flex flex-col">
-                <h2 className="mt-2 font-semibold tracking-tight text-gray-600 text-[2.5rem] leading-14 max-w-[520px]">
+                <h2 className="font-semibold tracking-tight text-gray-600 text-[2.5rem] leading-14 max-w-[520px]">
                     We’re <span className='text-gray-900'>building the</span> bridge to smart <span className='text-gray-900'>inventory management for</span> customers
                 </h2>
             </div>
