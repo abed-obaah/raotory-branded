@@ -1,7 +1,4 @@
 import ButtonRoundedSolid from '../../components/ButtonRoundedSolid'
-import ShieldCheckmarkIcon from "../../assets/shield-checkmark-icon.svg";
-// import { ShieldCheckIcon } from '@heroicons/react/24/outline';
-import { ShieldCheckIcon } from '@heroicons/react/24/solid';
 
 export default function AboutHero() {
   return (
