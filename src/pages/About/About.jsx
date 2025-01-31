@@ -1,6 +1,6 @@
 import Navbar from "../../components/Navbar";
 import TopBrands from "../../components/TopBrands";
-import AboutFaq from "./AboutFaq";
+import AboutFaqSection from "./AboutFaqSection";
 import AboutFounderMessage from "./AboutFounderMessage";
 import AboutHero from "./AboutHero";
 import AboutStatistics from "./AboutStatistics";
@@ -27,7 +27,7 @@ export default function About() {
             <TopBrands />
 
             {/* FAQ section */}
-            <AboutFaq />
+            <AboutFaqSection />
         </main>
     )
 }
