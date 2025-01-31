@@ -46,15 +46,15 @@ export default function Navbar() {
         {/* Desktop menu items */}
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           {/* Home menu */}
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          <a href="/" className="text-sm/6 font-semibold text-gray-900">
             Home
           </a>
           {/* About us menu */}
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          <a href="/about" className="text-sm/6 font-semibold text-gray-900">
             About Us
           </a>
           {/* Contact us menu */}
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          <a href="/contact" className="text-sm/6 font-semibold text-gray-900">
             Contact Us
           </a>
         </PopoverGroup>
