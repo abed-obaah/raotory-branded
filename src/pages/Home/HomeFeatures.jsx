@@ -13,7 +13,7 @@ export default function HomeFeatures() {
                     Features
                 </p>
                 <h2 className="mt-2 max-w-md text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
-                    Why manage your inventory with Raotory?
+                    Why Manage Your Inventory With Raotory?
                 </h2>
                 <p className="mt-6 text-3xl text-gray-600 opacity-50">
                     We empower businesses to achieve operational efficiency and growth by providing them with intelligent, easy-to-use inventory management solutions.

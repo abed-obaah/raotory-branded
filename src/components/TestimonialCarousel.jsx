@@ -88,7 +88,7 @@ export default function TestimonialCarousel() {
               Testimonials
           </h2>
           <p className="mt-2 max-w-3xl mx-auto text-4xl font-semibold tracking-tight text-pretty text-gray-900 text-center sm:text-5xl">
-            <span className="text-gray-600">See What Our</span> Raotory’s loyal Customers <span className="text-gray-600">Are Saying</span>
+            <span className="text-gray-600">See What Our</span> Raotory’s Loyal Customers <span className="text-gray-600">Are Saying</span>
           </p>
       </div>
       {/* Carousel */}
