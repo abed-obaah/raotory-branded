@@ -61,7 +61,7 @@ export default function Navbar() {
 
         {/* Get started button */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <ButtonRoundedSolid bgColor="bg-blue-29a8f1" hoverColor="hover:bg-blue-800" text="Get Started" href="#" />
+          <ButtonRoundedSolid text="Get Started" href="#" />
         </div>
       </nav>
 

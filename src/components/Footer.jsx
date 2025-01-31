@@ -79,7 +79,7 @@ const navigation = {
   
   export default function Footer() {
     return (
-      <footer className="mt-24 bg-blue-29a8f1">
+      <footer className="mt-24 bg-blue-0e90da">
         <div className="max-w-6xl mx-auto py-16">
           <div className="xl:grid xl:grid-cols-3 xl:gap-8">
             <div className="space-y-8">
@@ -91,9 +91,9 @@ const navigation = {
               <p className="hidden text-sm/6 text-balance text-gray-300">
                 We empower businesses to achieve operational efficiency and growth by providing them with intelligent, easy-to-use inventory management solutions.
               </p>
-              <div className="flex gap-x-6">
+              <div className="flex gap-x-3">
                 {navigation.social.map((item) => (
-                  <a key={item.name} href={item.href} className="text-white hover:text-gray-300">
+                  <a key={item.name} href={item.href} className="text-blue-0e90da hover:text-gray-300 bg-white p-2.5 rounded-full">
                     <span className="sr-only">{item.name}</span>
                     <item.icon aria-hidden="true" className="size-6" />
                   </a>
