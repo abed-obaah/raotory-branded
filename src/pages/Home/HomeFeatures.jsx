@@ -5,7 +5,7 @@ import { ShieldCheckIcon } from '@heroicons/react/24/solid';
 
 export default function HomeFeatures() {
   return (
-    <section className="max-w-6xl mx-auto pt-24">
+    <section className="max-w-6xl mx-auto mt-24">
         <div className="flex items-center gap-11.5">
             {/* Left side */}
             <div className="flex flex-col flex-1">

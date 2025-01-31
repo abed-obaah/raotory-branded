@@ -81,7 +81,7 @@ export default function TestimonialCarousel() {
   const visibleTestimonials = getVisibleTestimonials();
 
   return (
-    <section className="max-w-6xl mx-auto pt-24">
+    <section className="max-w-6xl mx-auto mt-24">
       {/* Heading */}
       <div className="mb-10">
           <h2 className="text-3xl text-gray-600 opacity-50 text-center">

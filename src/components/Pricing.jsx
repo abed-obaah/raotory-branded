@@ -1,11 +1,11 @@
 import { MdFlashOn } from "react-icons/md";
 import { IoIosListBox } from "react-icons/io";
-import ButtonSquareSolid from "../../components/ButtonSquareSolid";
+import ButtonSquareSolid from "./ButtonSquareSolid";
 import { IoDiamondOutline } from "react-icons/io5";
 
-export default function HomePricing() {
+export default function Pricing() {
     return (
-        <section class="max-w-6xl mx-auto pt-24">
+        <section class="max-w-6xl mx-auto mt-24">
             <div>
                 {/* Heading */}
                 <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">

@@ -23,7 +23,7 @@ const HomeMockup = () => {
   };
 
   return (
-    <section className="max-w-6xl mx-auto pt-24">
+    <section className="max-w-6xl mx-auto mt-24">
       <div className="relative w-full h-[800px] overflow-hidden flex justify-center items-center">
         {/* Images */}
         <div className="relative w-full h-full">

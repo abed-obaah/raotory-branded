@@ -1,11 +1,11 @@
 import Navbar from "../../components/Navbar";
+import Pricing from "../../components/Pricing";
 import TestimonialCarousel from "../../components/TestimonialCarousel";
 import TopBrands from "../../components/TopBrands";
 import HomeCallToAction from "./HomeCallToAction";
 import HomeFeatures from "./HomeFeatures";
 import HomeHero from "./HomeHero";
 import HomeMockup from "./HomeMockup";
-import HomePricing from "./HomePricing";
 
 export default function Home() {
     return (
@@ -29,7 +29,7 @@ export default function Home() {
             <TestimonialCarousel />
 
             {/* Pricing section */}
-            <HomePricing />
+            <Pricing />
 
             {/* Call to action section */}
             <HomeCallToAction />
