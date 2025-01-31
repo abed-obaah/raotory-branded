@@ -10,7 +10,9 @@ export default function About() {
     return (
         <main>
             {/* Navbar section */}
-            <Navbar />
+            <div className="mt-16">
+                <Navbar />
+            </div>
 
             {/* Hero section */}
             <AboutHero />

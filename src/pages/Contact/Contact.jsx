@@ -1,11 +1,10 @@
-import Navbar from "../../components/Navbar";
+import ContactHero from "./ContactHero";
 
 export default function Contact() {
     return (
         <main>
-            {/* Navbar section */}
-            <Navbar />
-
+            {/* Hero section */}
+            <ContactHero />
         </main>
     )
 }

@@ -16,7 +16,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-gray-e4e4e4 rounded-[50px] mt-16 max-w-6xl mx-auto">
+    <header className="bg-gray-e4e4e4 rounded-[50px] max-w-6xl mx-auto">
       <nav aria-label="Global" className="mx-auto flex items-center justify-between px-8 py-4">
 
         {/* Company logo */}

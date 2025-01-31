@@ -11,7 +11,9 @@ export default function Home() {
     return (
         <main>
             {/* Navbar section */}
-            <Navbar />
+            <div className="mt-16">
+                <Navbar />
+            </div>
 
             {/* Hero section */}
             <HomeHero />
