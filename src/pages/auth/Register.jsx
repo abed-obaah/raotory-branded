@@ -1,3 +1,5 @@
+import RaotoryLogoAndNameBlue from '../../assets/raotory-logo-name-blue.svg';
+
 export default function Register() {
     return (
       <>
@@ -22,7 +24,7 @@ export default function Register() {
                             type="text" 
                             name="name" 
                             id="name" 
-                            class="bg-white border border-black-10-percent text-blue-001b2a text-base rounded-[10px] focus:outline-none focus:ring-4 focus:ring-blue-300 block w-full p-6 dark:bg-white dark:border-black-10-percent dark:placeholder-gray-757575 dark:text-white" 
+                            class="bg-white border border-black-10-percent text-blue-001b2a text-base rounded-[10px] focus:outline-none focus:ring-4 focus:ring-blue-300 block w-full p-5 dark:bg-white dark:border-black-10-percent dark:placeholder-gray-757575 dark:text-white" 
                             placeholder="Full name" 
                             required 
                         />
@@ -33,7 +35,7 @@ export default function Register() {
                             type="email" 
                             name="email" 
                             id="email" 
-                            class="bg-white border border-black-10-percent text-blue-001b2a text-base rounded-[10px] focus:outline-none focus:ring-4 focus:ring-blue-300 block w-full p-6 dark:bg-white dark:border-black-10-percent dark:placeholder-gray-757575 dark:text-white" 
+                            class="bg-white border border-black-10-percent text-blue-001b2a text-base rounded-[10px] focus:outline-none focus:ring-4 focus:ring-blue-300 block w-full p-5 dark:bg-white dark:border-black-10-percent dark:placeholder-gray-757575 dark:text-white" 
                             placeholder="Email address" 
                             required 
                         />
@@ -44,7 +46,7 @@ export default function Register() {
                             type="password" 
                             name="password" 
                             id="password" 
-                            class="bg-white border border-black-10-percent text-blue-001b2a text-base rounded-[10px] focus:outline-none focus:ring-4 focus:ring-blue-300 block w-full p-6 dark:bg-white dark:border-black-10-percent dark:placeholder-gray-757575 dark:text-white" 
+                            class="bg-white border border-black-10-percent text-blue-001b2a text-base rounded-[10px] focus:outline-none focus:ring-4 focus:ring-blue-300 block w-full p-5 dark:bg-white dark:border-black-10-percent dark:placeholder-gray-757575 dark:text-white" 
                             placeholder="Password" 
                             required 
                         />
@@ -55,37 +57,45 @@ export default function Register() {
                             type="password" 
                             name="confirm-password" 
                             id="confirm-password" 
-                            class="bg-white border border-black-10-percent text-blue-001b2a text-base rounded-[10px] focus:outline-none focus:ring-4 focus:ring-blue-300 block w-full p-6 dark:bg-white dark:border-black-10-percent dark:placeholder-gray-757575 dark:text-white" 
+                            class="bg-white border border-black-10-percent text-blue-001b2a text-base rounded-[10px] focus:outline-none focus:ring-4 focus:ring-blue-300 block w-full p-5 dark:bg-white dark:border-black-10-percent dark:placeholder-gray-757575 dark:text-white" 
                             placeholder="Confirm password" 
                             required 
                         />
                     </div>
-            
-
-        
-                    <div>
+                    {/* Terms and conditions */}
+                    <div class="flex items-start">
+                        <div class="flex items-center h-5">
+                            <input id="terms" aria-describedby="terms" type="checkbox" class="w-4 h-4 border border-black-10-percent rounded bg-white focus:outline-none focus:ring-3 focus:ring-blue-300 dark:bg-white dark:border-black-10-percent" required />
+                        </div>
+                        <div class="ml-3 text-sm">
+                            <label for="terms" class="font-normal text-blue-001b2a dark:text-blue-001b2a">I accept the <a class="font-medium text-blue-001b2a hover:underline dark:text-blue-0e90da" href="#">Terms and Conditions</a></label>
+                        </div>
+                    </div>
+                    {/* Button */}
+                    <div className="mb-4">
                         <button
-                        type="submit"
-                        className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                            type="submit"
+                            className="flex w-full justify-center bg-gray-d9d9d9 focus:outline-none focus:ring-4 focus:ring-blue-300 font-semibold rounded-[10px] text-base p-5 text-center me-2"
                         >
-                        Sign in
+                            Continue
                         </button>
                     </div>
                 </form>
-    
-                <p className="mt-10 text-center text-sm/6 text-gray-500">
-                Not a member?{' '}
-                <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
-                    Start a 14 day free trial
-                </a>
+                {/* Log in option */}
+                <p className="text-center text-base text-gray-303a4d font-semibold">
+                    Already registered?{' '}
+                    <a href="#" className="font-semibold text-blue-29a8f1 hover:text-blue-0e90da">
+                        Login
+                    </a>
                 </p>
             </div>
 
-            <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+            {/* Company logo */}
+            <div className="mt-8.5">
                 <img
-                alt="Your Company"
-                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-                className="mx-auto h-10 w-auto"
+                    alt="Raotori logo"
+                    src={RaotoryLogoAndNameBlue}
+                    className="mx-auto h-7.5 w-auto"
                 />
             </div>
 
