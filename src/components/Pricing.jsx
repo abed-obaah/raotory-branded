@@ -5,21 +5,18 @@ import { IoDiamondOutline } from "react-icons/io5";
 import ButtonSquareSolid from "./ButtonSquareSolid";
 
 export default function Pricing() {
-    const [isAnnual, setIsAnnual] = useState(false);
+    const [isAnnual, setIsAnnual] = useState(true);
     const monthlyRef = useRef(null);
     const annualRef = useRef(null);
     const [highlightStyle, setHighlightStyle] = useState({});
 
-    const pricingData = {
-        singleStore: {
-            yearly: 50000,
-            monthly: Math.ceil((50000 / 12) * 1.25),
-        },
-        multiStores: {
-            yearly: 80000,
-            monthly: Math.ceil((80000 / 12) * 1.25),
-        },
-    };
+    const formatPrice = (price) => price.toLocaleString();
+
+    const monthlySingleStorePrice = Math.round(50000 / (0.8 * 12));
+    const monthlyMultiStorePrice = Math.round(80000 / (0.8 * 12));
+    
+    const singleStorePrice = isAnnual ? 50000 : monthlySingleStorePrice;
+    const multiStorePrice = isAnnual ? 80000 : monthlyMultiStorePrice;
 
     // Adjust the highlight dynamically
     useEffect(() => {
@@ -88,8 +85,8 @@ export default function Pricing() {
                         </p>
                         <hr className="border-0 h-[1px] bg-black-10-percent my-5" />
                         <div className="flex justify-center items-baseline mb-6">
-                            <span className="mr-2 text-[2rem] font-bold">
-                                NGN {isAnnual ? pricingData.singleStore.yearly : pricingData.singleStore.monthly}
+                            <span class="mr-2 text-[2rem] font-bold">
+                                NGN {formatPrice(singleStorePrice)}
                             </span>
                             <span className="text-gray-500">/{isAnnual ? "year" : "month"}</span>
                         </div>
@@ -128,8 +125,8 @@ export default function Pricing() {
                         </p>
                         <hr className="border-0 h-[1px] bg-black-10-percent my-5" />
                         <div className="flex justify-center items-baseline mb-6">
-                            <span className="mr-2 text-[2rem] font-bold">
-                                NGN {isAnnual ? pricingData.multiStores.yearly : pricingData.multiStores.monthly}
+                            <span class="mr-2 text-[2rem] font-bold">
+                                NGN {formatPrice(multiStorePrice)}
                             </span>
                             <span className="text-gray-500">/{isAnnual ? "year" : "month"}</span>
                         </div>
