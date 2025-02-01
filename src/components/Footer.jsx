@@ -2,10 +2,10 @@ import RaotoryLogoAndNameWhite from '../assets/raotory-logo-name-white.svg';
 
 const navigation = {
     quickLinks: [
-      { name: 'Home', href: '#' },
+      { name: 'Home', href: '/' },
       { name: 'Pricing', href: '#' },
-      { name: 'About us', href: '#' },
-      { name: 'Contact us', href: '#' },
+      { name: 'About us', href: '/about' },
+      { name: 'Contact us', href: '/contact' },
     ],
     company: [
       { name: 'Terms of service', href: '#' },
