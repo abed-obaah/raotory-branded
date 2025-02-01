@@ -2,7 +2,6 @@ import Navbar from "../../components/Navbar";
 import Pricing from "../../components/Pricing";
 import TestimonialCarousel from "../../components/TestimonialCarousel";
 import TopBrands from "../../components/TopBrands";
-import Register from "../auth/Register";
 import HomeCallToAction from "./HomeCallToAction";
 import HomeFeatures from "./HomeFeatures";
 import HomeHero from "./HomeHero";
@@ -15,8 +14,6 @@ export default function Home() {
             <div className="mt-16">
                 <Navbar />
             </div>
-
-            <Register />
 
             {/* Hero section */}
             <HomeHero />
