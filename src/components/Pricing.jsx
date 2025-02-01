@@ -76,14 +76,19 @@ export default function Pricing() {
                 <div className="flex justify-center gap-12">
                     {/* Single Store Pricing Card */}
                     <div className="flex flex-col p-6 max-w-[352px] text-gray-0d0d0d bg-white rounded-[20px] border border-black-10-percent shadow">
+                        {/* Plan icon */}
                         <div className="flex items-center justify-center border border-black-10-percent rounded-full size-10 mb-6">
                             <MdFlashOn className="size-7.5 text-gray-0d0d0d" />
                         </div>
+                        {/* Plan title */}
                         <h3 className="mb-2 text-2xl font-semibold">Single Store</h3>
+                        {/* Plan description */}
                         <p className="font-light text-gray-500 text-base leading-5">
                             Select this option if your business has just one location.
                         </p>
+                        {/* Horizontal rule */}
                         <hr className="border-0 h-[1px] bg-black-10-percent my-5" />
+                        {/* Price */}
                         <div className="flex justify-center items-baseline mb-6">
                             <span class="mr-2 text-[2rem] font-bold">
                                 NGN {formatPrice(singleStorePrice)}
@@ -116,14 +121,19 @@ export default function Pricing() {
                         style={{ background: "linear-gradient(180deg, #8FD7FF 0%, rgba(126, 184, 217, 0.398242) 43.59%, rgba(118, 169, 198, 0.1165) 64%, rgba(7, 77, 116, 0.05) 100%)" }}
                         className="flex flex-col p-6 max-w-[352px] text-gray-0d0d0d bg-white rounded-[20px] border border-black-10-percent shadow"
                     >
-                        <div className="flex items-center justify-center border border-black-10-percent rounded-full size-10 mb-6">
+                        {/* Plan icon */}
+                        <div className="flex items-center justify-center border border-white bg-white rounded-full size-10 mb-6">
                             <IoDiamondOutline className="size-7.5 text-gray-0d0d0d" />
                         </div>
+                        {/* Plan title */}
                         <h3 className="mb-2 text-2xl font-semibold">Multi Stores</h3>
+                        {/* Plan description */}
                         <p className="font-light text-gray-500 text-base leading-5">
                             Select this option if your business has different locations.
                         </p>
+                        {/* Horizontal rule */}
                         <hr className="border-0 h-[1px] bg-black-10-percent my-5" />
+                        {/* Price */}
                         <div className="flex justify-center items-baseline mb-6">
                             <span class="mr-2 text-[2rem] font-bold">
                                 NGN {formatPrice(multiStorePrice)}
