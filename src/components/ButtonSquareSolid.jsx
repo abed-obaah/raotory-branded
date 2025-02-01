@@ -2,7 +2,7 @@ import React from "react";
 
 const ButtonSquareSolid = ({ 
   bgColor = "bg-blue-29a8f1", 
-  hoverColor = "hover:bg-blue-800", 
+  hoverColor = "hover:bg-blue-0e90da", 
   textColor = "text-white", 
   text = "Get Started", 
   href = "#" 
