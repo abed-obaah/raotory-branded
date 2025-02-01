@@ -1,7 +1,8 @@
 import ButtonRoundedSolid from '../../components/ButtonRoundedSolid'
-import ShieldCheckmarkIcon from "../../assets/shield-checkmark-icon.svg";
-// import { ShieldCheckIcon } from '@heroicons/react/24/outline';
-import { ShieldCheckIcon } from '@heroicons/react/24/solid';
+import { BsShieldFillCheck } from "react-icons/bs";
+import SupportIcon from '../../assets/support-icon.svg';
+import { GoStarFill } from "react-icons/go";
+import { IoIosHeart } from "react-icons/io";
 
 export default function HomeFeatures() {
   return (
@@ -34,7 +35,7 @@ export default function HomeFeatures() {
                         <h5 class="text-lg font-medium text-gray-600 leading-[22px] dark:text-gray-600">
                             Real-Time Inventory Tracking
                         </h5>
-                        <ShieldCheckIcon className="size-20 stroke-gray-b4b4b4 fill-gray-dbdbdb" strokeWidth={0.5} />
+                        <BsShieldFillCheck className='size-16 stroke-gray-b4b4b4 fill-gray-dbdbdb' strokeWidth={0.2} />
                         <p class="text-sm font-normal text-gray-600 dark:text-gray-600">
                             Track your stock levels across multiple locations in real-time, so you never run out of the products your customers need.
                         </p>
@@ -45,7 +46,7 @@ export default function HomeFeatures() {
                         <h5 class="text-[22px] font-semibold text-white leading-[22px] dark:text-white">
                             Powerful Analytics and Reporting
                         </h5>
-                        <ShieldCheckIcon className="size-20 stroke-gray-b4b4b4 fill-gray-dbdbdb" strokeWidth={0.5} />
+                        <img src={SupportIcon} alt="Support icon" className='w-full h-auto max-w-[104px]' />
                         <p class="text-sm font-normal text-white dark:text-white">
                             Analyze your inventory performance with comprehensive reports on turnover rates, holding costs, and demand forecasts.
                         </p>
@@ -59,7 +60,8 @@ export default function HomeFeatures() {
                         <h5 class="text-lg font-medium text-gray-600 leading-[22px] dark:text-gray-600">
                             Automated Alerts and Notifications
                         </h5>
-                        <ShieldCheckIcon className="size-20 stroke-gray-b4b4b4 fill-gray-dbdbdb" strokeWidth={0.5} />
+                        {/* <ShieldCheckIcon className="size-20 stroke-gray-b4b4b4 fill-gray-dbdbdb" strokeWidth={0.5} /> */}
+                        <GoStarFill className="size-18 stroke-gray-b4b4b4 fill-gray-dbdbdb" strokeWidth={0.5} />
                         <p class="text-sm font-normal text-gray-600 dark:text-gray-600">
                             Receive low-stock alerts, expiration date reminders, and re-order suggestions to help you stay ahead of your inventory needs.
                         </p>
@@ -70,7 +72,7 @@ export default function HomeFeatures() {
                         <h5 class="text-lg font-medium text-gray-600 leading-[22px] dark:text-gray-600">
                             Simplified Order Management
                         </h5>
-                        <ShieldCheckIcon className="size-20 stroke-gray-b4b4b4 fill-gray-dbdbdb" strokeWidth={0.5} />
+                        <IoIosHeart className="size-20 stroke-gray-b4b4b4 fill-gray-dbdbdb" strokeWidth={0.5} />
                         <p class="text-sm font-normal text-gray-600 dark:text-gray-600">
                             Easily manage orders, returns, and transfers with a user-friendly interface designed to reduce errors and speed up operations
                         </p>
