@@ -115,6 +115,7 @@ export default function TestimonialCarousel() {
               const isActive = testimonials.indexOf(testimonial) === index;
 
               return (
+                // Avatar
                 <motion.img
                   key={i}
                   src={testimonial.image}
