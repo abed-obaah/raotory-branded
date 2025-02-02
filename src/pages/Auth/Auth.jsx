@@ -1,5 +1,6 @@
 import Navbar from "../../components/Navbar";
 import EmailVerification from "./EmailVerification";
+import Login from "./Login";
 import Register from "./Register";
 
 export default function Auth() {
@@ -14,6 +15,7 @@ export default function Auth() {
             <div className="mt-24 flex flex-col gap-16">
                 <Register />
                 <EmailVerification />
+                <Login />
             </div>
 
         </main>
