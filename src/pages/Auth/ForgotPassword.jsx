@@ -1,6 +1,6 @@
 import RaotoryLogoAndNameBlue from '../../assets/raotory-logo-name-blue.svg';
 
-export default function EmailVerification() {
+export default function ForgotPassword() {
     return (
       <>
         <div className="flex flex-col w-full max-w-[536px] mx-auto p-10.5 border border-black-10-percent rounded-3xl">
@@ -8,24 +8,24 @@ export default function EmailVerification() {
             {/* Heading */}
             <div className="mb-13">
                 <h2 className="text-[2rem] font-semibold">
-                    Email Verification
+                    Forgot Password
                 </h2>
                 <p className="text-gray-600">
-                    Please enter the 6 digit code sent to the email provided during registration.
+                    Please enter the email address associated with your account.
                 </p>
             </div>
   
             {/* Form */}
             <div className="w-full">
                 <form action="#" method="POST" className="space-y-52">
-                    {/* OTP Code */}
+                    {/* Email */}
                     <div>
                         <input 
-                            type="text" 
-                            name="otp-code" 
-                            id="otp-code" 
+                            type="email" 
+                            name="email" 
+                            id="email" 
                             class="bg-white border border-black-10-percent text-blue-001b2a text-base rounded-[10px] focus:outline-none focus:ring-4 focus:ring-blue-300 block w-full p-5 dark:bg-white dark:border-black-10-percent dark:placeholder-gray-757575 dark:text-white" 
-                            placeholder="OTP code" 
+                            placeholder="Email address" 
                             required 
                         />
                     </div>

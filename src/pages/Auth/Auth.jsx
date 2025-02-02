@@ -1,5 +1,6 @@
 import Navbar from "../../components/Navbar";
 import EmailVerification from "./EmailVerification";
+import ForgotPassword from "./ForgotPassword";
 import Login from "./Login";
 import Register from "./Register";
 
@@ -16,6 +17,7 @@ export default function Auth() {
                 <Register />
                 <EmailVerification />
                 <Login />
+                <ForgotPassword />
             </div>
 
         </main>
