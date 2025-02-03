@@ -4,7 +4,7 @@ import ForgotPassword from "./ForgotPassword";
 import Login from "./Login";
 import Register from "./Register";
 
-export default function Auth() {
+export default function Account() {
     return (
         <main>
             {/* Navbar section */}
