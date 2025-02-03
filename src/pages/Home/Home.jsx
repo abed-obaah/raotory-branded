@@ -16,7 +16,7 @@ export default function Home() {
             </div>
 
             {/* Hero section */}
-            {/* <HomeHero /> */}
+            <HomeHero />
 
             {/* Mockup section */}
             {/* <HomeMockup /> */}
