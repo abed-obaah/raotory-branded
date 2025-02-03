@@ -24,9 +24,9 @@ export default function Navbar() {
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <img
-              alt=""
+              alt="Raotory logo"
               src={RaotoryLogoAndNameBlue}
-              className="h-8 w-auto"
+              className="h-5 w-auto md:h-8"
             />
           </a>
         </div>
@@ -73,9 +73,9 @@ export default function Navbar() {
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <img
-                alt=""
-                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-                className="h-8 w-auto"
+                alt="Raotory logo"
+                src={RaotoryLogoAndNameBlue}
+                className="h-6 w-auto"
               />
             </a>
 
@@ -96,21 +96,21 @@ export default function Navbar() {
               <div className="space-y-2 py-6">
                 {/* Home menu */}
                 <a
-                  href="#"
+                  href="/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   Home
                 </a>
                 {/* About us menu */}
                 <a
-                  href="#"
+                  href="/about"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   About Us
                 </a>
                 {/* Contact us menu */}
                 <a
-                  href="#"
+                  href="/contact"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   Contact Us
