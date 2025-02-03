@@ -6,32 +6,32 @@ import { IoIosHeart } from "react-icons/io";
 
 export default function HomeFeatures() {
   return (
-    <section className="max-w-6xl mx-auto mt-24">
-        <div className="flex items-center gap-11.5">
+    <section className="section-px section-mt max-w-6xl mx-auto mb-40">
+        {/* Section wrapper */}
+        <div className="flex flex-col lg:flex-row items-center gap-11.5">
             {/* Left side */}
-            <div className="flex flex-col flex-1">
-                <p className="text-3xl text-gray-600 opacity-50">
+            <div className="flex flex-col md:flex-1">
+                <p className="text-lg md:text-3xl text-gray-600 opacity-50">
                     Features
                 </p>
                 <h2 className="mt-2 max-w-md text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
                     Why Manage Your Inventory With Raotory?
                 </h2>
-                <p className="mt-6 text-3xl text-gray-600 opacity-50">
+                <p className="mt-6 text-2xl md:text-3xl text-gray-600 opacity-50">
                     We empower businesses to achieve operational efficiency and growth by providing them with intelligent, easy-to-use inventory management solutions.
                 </p>
                 {/* Button */}
-                <div className='flex mt-10'>
+                <div className='flex mt-6 md:mt-10'>
                     <ButtonRoundedSolid text="Get Started" href="/account/register" />
                 </div>
             </div>
 
             {/* Right side */}
-            <div className='flex-1 flex flex-col gap-8'>
-
+            <div className='md:flex-1 flex flex-col gap-8'>
                 {/* Cards 01 and 02 */}
-                <div className='flex items-center gap-8'>
+                <div className='flex flex-col sm:flex-row items-center gap-8'>
                     {/* Card 01 */}
-                    <div class="flex flex-col items-center justify-center self-end gap-3 w-[260px] h-[276px] px-3.5 py-4.5 text-center bg-white border border-black-10-percent rounded-[46px] dark:bg-white dark:border-black-10-percent">
+                    <div class="flex flex-col items-center justify-center self-end gap-3 w-full md:w-[260px] h-auto md:h-[276px] px-3.5 py-4.5 text-center bg-white border border-black-10-percent rounded-[46px] dark:bg-white dark:border-black-10-percent">
                         <h5 class="text-lg font-medium text-gray-600 leading-[22px] dark:text-gray-600">
                             Real-Time Inventory Tracking
                         </h5>
@@ -42,8 +42,8 @@ export default function HomeFeatures() {
                     </div>
 
                     {/* Card 02 */}
-                    <div class="flex flex-col items-center justify-center gap-3 w-[294px] h-[312px] px-3.5 py-4.5 text-center bg-blue-29a8f1 border border-black-10-percent rounded-[46px] dark:bg-blue-29a8f1 dark:border-black-10-percent">
-                        <h5 class="text-[22px] font-semibold text-white leading-[22px] dark:text-white">
+                    <div class="flex flex-col items-center justify-center gap-3 w-full md:w-[294px] h-auto md:h-[312px] px-3.5 py-4.5 text-center bg-blue-29a8f1 border border-black-10-percent rounded-[46px] dark:bg-blue-29a8f1 dark:border-black-10-percent">
+                        <h5 class="text-lg md:text-[22px] font-semibold text-white leading-[22px] dark:text-white">
                             Powerful Analytics and Reporting
                         </h5>
                         <img src={SupportIcon} alt="Support icon" className='w-full h-auto max-w-[104px]' />
@@ -54,9 +54,9 @@ export default function HomeFeatures() {
                 </div>
 
                 {/* Cards 03 and 04 */}
-                <div className='flex items-center gap-8'>
+                <div className='flex flex-col sm:flex-row items-center gap-8'>
                     {/* Card 03 */}
-                    <div class="flex flex-col items-center justify-center gap-3 w-[260px] h-[276px] px-3.5 py-4.5 text-center bg-white border border-black-10-percent rounded-[46px] dark:bg-white dark:border-black-10-percent">
+                    <div class="flex flex-col items-center justify-center gap-3 w-full md:w-[260px] h-auto md:h-[276px] px-3.5 py-4.5 text-center bg-white border border-black-10-percent rounded-[46px] dark:bg-white dark:border-black-10-percent">
                         <h5 class="text-lg font-medium text-gray-600 leading-[22px] dark:text-gray-600">
                             Automated Alerts and Notifications
                         </h5>
@@ -68,7 +68,7 @@ export default function HomeFeatures() {
                     </div>
 
                     {/* Card 04 */}
-                    <div class="flex flex-col items-center justify-center gap-3 w-[260px] h-[276px] px-3.5 py-4.5 text-center bg-white border border-black-10-percent rounded-[46px] dark:bg-white dark:border-black-10-percent">
+                    <div class="flex flex-col items-center justify-center gap-3 w-full md:w-[260px] h-auto md:h-[276px] px-3.5 py-4.5 text-center bg-white border border-black-10-percent rounded-[46px] dark:bg-white dark:border-black-10-percent">
                         <h5 class="text-lg font-medium text-gray-600 leading-[22px] dark:text-gray-600">
                             Simplified Order Management
                         </h5>

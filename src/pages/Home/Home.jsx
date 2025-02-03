@@ -25,7 +25,7 @@ export default function Home() {
             <TopBrands />
 
             {/* Features section */}
-            {/* <HomeFeatures /> */}
+            <HomeFeatures />
 
             {/* Testimonial section */}
             {/* <TestimonialCarousel /> */}
