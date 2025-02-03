@@ -1,3 +1,4 @@
+import { HashLink } from 'react-router-hash-link';
 import RaotoryLogoAndNameWhite from '../assets/raotory-logo-name-white.svg';
 
 const navigation = {
@@ -111,9 +112,15 @@ const navigation = {
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.quickLinks.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-base text-white hover:text-gray-300">
-                        {item.name}
-                      </a>
+                      {item.name === 'Pricing' ? (
+                        <HashLink smooth to="/#pricing" className="text-base text-white hover:text-gray-300">
+                          {item.name}
+                        </HashLink>
+                      ) : (
+                        <a href={item.href} className="text-base text-white hover:text-gray-300">
+                          {item.name}
+                        </a>
+                      )}
                     </li>
                   ))}
                 </ul>

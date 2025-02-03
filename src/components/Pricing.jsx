@@ -30,7 +30,7 @@ export default function Pricing() {
     }, [isAnnual]);
 
     return (
-        <section className="max-w-6xl mx-auto mt-24">
+        <section id="pricing" className="max-w-6xl mx-auto mt-24">
             <div>
                 {/* Heading */}
                 <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
