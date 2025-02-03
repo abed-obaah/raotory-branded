@@ -28,7 +28,7 @@ export default function Home() {
             <HomeFeatures />
 
             {/* Testimonial section */}
-            {/* <TestimonialCarousel /> */}
+            <TestimonialCarousel />
 
             {/* Pricing section */}
             {/* <Pricing /> */}

@@ -81,24 +81,24 @@ export default function TestimonialCarousel() {
   const visibleTestimonials = getVisibleTestimonials();
 
   return (
-    <section className="max-w-6xl mx-auto mt-24">
+    <section className="section-px section-mt max-w-6xl mx-auto">
       {/* Heading */}
       <div className="mb-10">
-          <h2 className="text-3xl text-gray-600 opacity-50 text-center">
+          <p className="text-lg md:text-3xl text-gray-600 opacity-50 text-center">
               Testimonials
-          </h2>
-          <p className="mt-2 max-w-3xl mx-auto text-4xl font-semibold tracking-tight text-pretty text-gray-900 text-center sm:text-5xl">
-            <span className="text-gray-600">See What Our</span> Raotory’s Loyal Customers <span className="text-gray-600">Are Saying</span>
           </p>
+          <h2 className="mt-2 max-w-3xl mx-auto text-4xl font-semibold tracking-tight text-pretty text-gray-900 text-center sm:text-5xl">
+            <span className="text-gray-600">See What Our</span> Raotory’s Loyal Customers <span className="text-gray-600">Are Saying</span>
+          </h2>
       </div>
       {/* Carousel */}
       <div className="flex flex-col items-center w-full max-w-6xl mx-auto text-center">
-        <div className="relative flex items-center gap-4 overflow-hidden w-full py-4">
+        <div className="relative flex items-center gap-4 overflow-hidden w-full md:py-4">
 
           {/* Left navigation button */}
           <button
             className={cn(
-              "absolute left-20 p-5 rounded-full transition-colors",
+              "absolute md:left-20 p-3 md:p-5 rounded-full transition-colors",
               index === 0
                 ? "bg-gray-300 text-black cursor-not-allowed"  // Disabled state
                 : "bg-blue-500 text-white hover:bg-blue-400",   // Active state
@@ -110,7 +110,7 @@ export default function TestimonialCarousel() {
             <FaChevronLeft size={24} />
           </button>
 
-          <div className="flex gap-8 justify-center items-center w-full">
+          <div className="flex gap-4 md:gap-8 justify-center items-center w-full">
             {visibleTestimonials.map((testimonial, i) => {
               const isActive = testimonials.indexOf(testimonial) === index;
 
@@ -121,8 +121,8 @@ export default function TestimonialCarousel() {
                   src={testimonial.image}
                   alt={testimonial.name}
                   className={cn(
-                    "w-[100px] h-[100px] rounded-full cursor-pointer transition-all duration-300",
-                    isActive && "w-[130px] h-[130px] border-4 border-blue-500"
+                    "w-[80px] md:w-[100px] h-[80px] md:h-[100px] rounded-full cursor-pointer transition-all duration-300",
+                    isActive && "w-[100px] md:w-[130px] h-[100px] md:h-[130px] border-4 border-blue-500"
                   )}
                   onClick={() => setIndex(testimonials.indexOf(testimonial))}
                 />
@@ -133,7 +133,7 @@ export default function TestimonialCarousel() {
           {/* Right navigation button */}
           <button
             className={cn(
-              "absolute right-20 p-5 rounded-full transition-colors",
+              "absolute right-0 md:right-20 p-3 md:p-5 rounded-full transition-colors",
               index === testimonials.length - 1
                 ? "bg-gray-300 text-black cursor-not-allowed"  // Disabled state
                 : "bg-blue-500 text-white hover:bg-blue-400",   // Active state
@@ -156,9 +156,9 @@ export default function TestimonialCarousel() {
           className="mt-4"
         >
           {/* Client review */}
-          <p className="text-[2rem] text-gray-600 font-normal px-40">"{testimonials[index].review}"</p>
+          <p className="mt-2 md:mt-0 text-xl md:text-[2rem] text-gray-600 font-normal md:px-40">"{testimonials[index].review}"</p>
           {/* Stars */}
-          <div className="flex justify-center mt-4 text-yellow-ffe26f text-[2.5rem] space-x-4">
+          <div className="flex justify-center mt-2 md:mt-4 text-yellow-ffe26f text-3xl md:text-[2.5rem] space-x-4">
             {Array(5)
               .fill()
               .map((_, i) => (
@@ -166,9 +166,9 @@ export default function TestimonialCarousel() {
               ))}
           </div>
           {/* Client name */}
-          <p className="mt-4 text-[2rem] font-bold">{testimonials[index].name}</p>
+          <p className="mt-2 md:mt-4 text-xl md:text-[2rem] font-bold">{testimonials[index].name}</p>
           {/* Client position */}
-          <p className="text-2xl text-gray-600">{testimonials[index].position}</p>
+          <p className="md:text-2xl text-gray-600">{testimonials[index].position}</p>
         </motion.div>
       </div>
     </section>

@@ -6,7 +6,7 @@ import { IoIosHeart } from "react-icons/io";
 
 export default function HomeFeatures() {
   return (
-    <section className="section-px section-mt max-w-6xl mx-auto mb-40">
+    <section className="section-px section-mt max-w-6xl mx-auto">
         {/* Section wrapper */}
         <div className="flex flex-col lg:flex-row items-center gap-11.5">
             {/* Left side */}
