@@ -17,7 +17,7 @@ function App() {
         <Route path="/account/*" element={<Account />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </Router>
   );
 }
