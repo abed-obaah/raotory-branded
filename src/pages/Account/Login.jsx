@@ -3,7 +3,7 @@ import RaotoryLogoAndNameBlue from '../../assets/raotory-logo-name-blue.svg';
 export default function Login() {
     return (
       <>
-        <div className="flex flex-col w-full max-w-[536px] mx-auto p-10.5 border border-black-10-percent rounded-3xl">
+        <div className="flex flex-col w-full max-w-[536px] mx-auto p-10.5 border border-black-10-percent rounded-3xl mt-16">
             
             {/* Heading */}
             <div className="mb-7">
@@ -57,7 +57,7 @@ export default function Login() {
                 {/* Log in option */}
                 <p className="text-center text-base text-gray-303a4d font-semibold">
                     Don’t have an account?{' '}
-                    <a href="#" className="font-semibold text-blue-29a8f1 hover:text-blue-0e90da">
+                    <a href="/account/register" className="font-semibold text-blue-29a8f1 hover:text-blue-0e90da">
                         Register
                     </a>
                 </p>

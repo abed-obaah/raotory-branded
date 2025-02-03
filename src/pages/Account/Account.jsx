@@ -1,25 +1,16 @@
-import Navbar from "../../components/Navbar";
-import EmailVerification from "./EmailVerification";
-import ForgotPassword from "./ForgotPassword";
-import Login from "./Login";
+import { Routes, Route } from "react-router-dom";
 import Register from "./Register";
+import Login from "./Login";
 
-export default function Account() {
-    return (
-        <main>
-            {/* Navbar section */}
-            <div className="mt-16">
-                <Navbar />
-            </div>
+const Account = () => {
+  return (
+    <>
+        <Routes>
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+        </Routes>
+    </>
+  );
+};
 
-            {/* Temporary container */}
-            <div className="mt-24 flex flex-col gap-16">
-                <Register />
-                <EmailVerification />
-                <Login />
-                <ForgotPassword />
-            </div>
-
-        </main>
-    )
-}
+export default Account;
