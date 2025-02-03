@@ -23,10 +23,10 @@ const HomeMockup = () => {
   };
 
   return (
-    <section className="mt-16 max-w-6xl mx-auto">
+    <section className="section-mt max-w-6xl mx-auto">
       <div className="relative w-full h-[240px] sm:h-[400px] md:h-[600px] flex justify-center items-center">
         {/* Images */}
-        <div className="relative w-full h-full mb-10">
+        <div className="relative w-full h-full mb-4 md:mb-10">
           <motion.img
             src={images[0]}
             alt="First Image"
