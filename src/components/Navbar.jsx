@@ -18,7 +18,7 @@ export default function Navbar() {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <header className="bg-gray-e4e4e4 rounded-[50px] max-w-6xl mx-auto">
+    <header className="bg-gray-e4e4e4 md:rounded-[50px] max-w-6xl mx-auto">
       <nav
         aria-label="Global"
         className="mx-auto flex items-center justify-between px-8 py-4"
@@ -112,7 +112,7 @@ export default function Navbar() {
               <div className="space-y-2 py-6">
                 <a
                   href="/"
-                  className={`-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold ${
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-2xl md:text-base/7 font-semibold ${
                     isActive("/") ? "text-blue-29a8f1" : "text-gray-757575"
                   } hover:bg-gray-50`}
                 >
@@ -120,7 +120,7 @@ export default function Navbar() {
                 </a>
                 <a
                   href="/about"
-                  className={`-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold ${
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-2xl md:text-base/7 font-semibold ${
                     isActive("/about") ? "text-blue-29a8f1" : "text-gray-757575"
                   } hover:bg-gray-50`}
                 >
@@ -128,7 +128,7 @@ export default function Navbar() {
                 </a>
                 <a
                   href="/contact"
-                  className={`-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold ${
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-2xl md:text-base/7 font-semibold ${
                     isActive("/contact") ? "text-blue-29a8f1" : "text-gray-757575"
                   } hover:bg-gray-50`}
                 >
@@ -138,7 +138,7 @@ export default function Navbar() {
               <div className="py-6">
                 <a
                   href="/account/register"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-757575 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-2xl md:text-base/7 font-semibold text-gray-757575 hover:bg-gray-50"
                 >
                   Get Started
                 </a>

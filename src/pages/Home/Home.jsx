@@ -11,30 +11,30 @@ export default function Home() {
     return (
         <main>
             {/* Navbar section */}
-            <div className="mt-16">
+            <div className="md:mt-16">
                 <Navbar />
             </div>
 
             {/* Hero section */}
-            <HomeHero />
+            {/* <HomeHero /> */}
 
             {/* Mockup section */}
-            <HomeMockup />
+            {/* <HomeMockup /> */}
 
             {/* Top brands section */}
-            <TopBrands />
+            {/* <TopBrands /> */}
 
             {/* Features section */}
-            <HomeFeatures />
+            {/* <HomeFeatures /> */}
 
             {/* Testimonial section */}
-            <TestimonialCarousel />
+            {/* <TestimonialCarousel /> */}
 
             {/* Pricing section */}
-            <Pricing />
+            {/* <Pricing /> */}
 
             {/* Call to action section */}
-            <HomeCallToAction />
+            {/* <HomeCallToAction /> */}
 
         </main>
     )
