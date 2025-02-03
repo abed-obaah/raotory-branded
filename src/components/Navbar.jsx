@@ -1,24 +1,28 @@
-import { useState } from 'react';
+import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import {
   Dialog,
   DialogPanel,
   PopoverGroup,
-} from '@headlessui/react';
-import {
-  Bars3Icon,
-  XMarkIcon,
-} from '@heroicons/react/24/outline';
+} from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
-import RaotoryLogoAndNameBlue from '../assets/raotory-logo-name-blue.svg';
-import ButtonRoundedSolid from './ButtonRoundedSolid';
+import RaotoryLogoAndNameBlue from "../assets/raotory-logo-name-blue.svg";
+import ButtonRoundedSolid from "./ButtonRoundedSolid";
 
 export default function Navbar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
+  // Function to check if link is active
+  const isActive = (path) => location.pathname === path;
 
   return (
     <header className="bg-gray-e4e4e4 rounded-[50px] max-w-6xl mx-auto">
-      <nav aria-label="Global" className="mx-auto flex items-center justify-between px-8 py-4">
-
+      <nav
+        aria-label="Global"
+        className="mx-auto flex items-center justify-between px-8 py-4"
+      >
         {/* Company logo */}
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
@@ -30,7 +34,7 @@ export default function Navbar() {
             />
           </a>
         </div>
-        
+
         {/* Mobile menu bars (open) icon */}
         <div className="flex lg:hidden">
           <button
@@ -45,16 +49,28 @@ export default function Navbar() {
 
         {/* Desktop menu items */}
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          {/* Home menu */}
-          <a href="/" className="text-sm/6 font-semibold text-gray-900">
+          <a
+            href="/"
+            className={`text-sm/6 font-semibold ${
+              isActive("/") ? "text-blue-29a8f1 hover:text-blue-0e90da" : "text-gray-757575 hover:text-blue-29a8f1"
+            }`}
+          >
             Home
           </a>
-          {/* About us menu */}
-          <a href="/about" className="text-sm/6 font-semibold text-gray-900">
+          <a
+            href="/about"
+            className={`text-sm/6 font-semibold ${
+              isActive("/about") ? "text-blue-29a8f1 hover:text-blue-0e90da" : "text-gray-757575 hover:text-blue-29a8f1"
+            }`}
+          >
             About Us
           </a>
-          {/* Contact us menu */}
-          <a href="/contact" className="text-sm/6 font-semibold text-gray-900">
+          <a
+            href="/contact"
+            className={`text-sm/6 font-semibold ${
+              isActive("/contact") ? "text-blue-29a8f1 hover:text-blue-0e90da" : "text-gray-757575 hover:text-blue-29a8f1"
+            }`}
+          >
             Contact Us
           </a>
         </PopoverGroup>
@@ -94,33 +110,35 @@ export default function Navbar() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                {/* Home menu */}
                 <a
                   href="/"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold ${
+                    isActive("/") ? "text-blue-29a8f1" : "text-gray-757575"
+                  } hover:bg-gray-50`}
                 >
                   Home
                 </a>
-                {/* About us menu */}
                 <a
                   href="/about"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold ${
+                    isActive("/about") ? "text-blue-29a8f1" : "text-gray-757575"
+                  } hover:bg-gray-50`}
                 >
                   About Us
                 </a>
-                {/* Contact us menu */}
                 <a
                   href="/contact"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold ${
+                    isActive("/contact") ? "text-blue-29a8f1" : "text-gray-757575"
+                  } hover:bg-gray-50`}
                 >
                   Contact Us
                 </a>
               </div>
               <div className="py-6">
-                {/* Get started menu */}
                 <a
                   href="/account/register"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-757575 hover:bg-gray-50"
                 >
                   Get Started
                 </a>
@@ -130,5 +148,5 @@ export default function Navbar() {
         </DialogPanel>
       </Dialog>
     </header>
-  )
+  );
 }
