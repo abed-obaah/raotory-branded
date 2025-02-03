@@ -61,7 +61,7 @@ export default function Navbar() {
 
         {/* Get started button */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <ButtonRoundedSolid text="Get Started" href="#" />
+          <ButtonRoundedSolid text="Get Started" href="/account/register" />
         </div>
       </nav>
 
@@ -119,7 +119,7 @@ export default function Navbar() {
               <div className="py-6">
                 {/* Get started menu */}
                 <a
-                  href="#"
+                  href="/account/register"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   Get Started
