@@ -11,7 +11,7 @@ export default function HomeHero() {
             <p className="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8 max-w-[648px] mx-auto">
                 Make data-driven decisions with powerful analytics and minimize losses with precise inventory control
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-x-6 gap-y-4">
                 <ButtonRoundedSolid text="Get Started" href="/account/register" />
                 <ButtonRoundedSolid bgColor="bg-gray-d9d9d9" hoverColor="hover:bg-gray-400" textColor="text-gray-600" text="Learn More" href="/about" />
             </div>

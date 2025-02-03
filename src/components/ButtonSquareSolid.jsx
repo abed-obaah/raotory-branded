@@ -8,11 +8,12 @@ const ButtonSquareSolid = ({
   href = "#" 
 }) => {
   return (
-    <a
-      href={href}
-      className={`${textColor} ${bgColor} ${hoverColor} focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-[10px] text-sm px-11 py-2.5 text-center me-2 dark:${bgColor} dark:${hoverColor} dark:focus:ring-blue-800`}
-    >
-      {text}
+    <a href={href} className="inline-block w-full sm:w-max">
+      <button
+        className={`w-full ${textColor} ${bgColor} ${hoverColor} focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-[10px] text-sm px-11 py-2.5 text-center dark:${bgColor} dark:${hoverColor} dark:focus:ring-blue-800`}
+      >
+        {text}
+      </button>
     </a>
   );
 };
