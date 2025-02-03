@@ -22,7 +22,7 @@ export default function Home() {
             <HomeMockup />
 
             {/* Top brands section */}
-            {/* <TopBrands /> */}
+            <TopBrands />
 
             {/* Features section */}
             {/* <HomeFeatures /> */}
