@@ -80,7 +80,7 @@ const navigation = {
   export default function Footer() {
     return (
       <footer className="mt-24 bg-blue-0e90da">
-        <div className="max-w-6xl mx-auto py-16">
+        <div className="max-w-6xl mx-auto pt-16 pb-8">
           <div className="xl:grid xl:grid-cols-3 xl:gap-8">
             <div className="space-y-8">
               <img
