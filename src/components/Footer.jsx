@@ -83,11 +83,15 @@ const navigation = {
         <div className="max-w-6xl mx-auto pt-16 pb-8">
           <div className="xl:grid xl:grid-cols-3 xl:gap-8">
             <div className="space-y-8">
-              <img
-                alt="Raotory logo"
-                src={RaotoryLogoAndNameWhite}
-                className="h-10"
-              />
+              <div>
+                <a href="/">
+                  <img
+                    alt="Raotory logo"
+                    src={RaotoryLogoAndNameWhite}
+                    className="h-10"
+                  />              
+                </a>
+              </div>
               <p className="hidden text-sm/6 text-balance text-gray-300">
                 We empower businesses to achieve operational efficiency and growth by providing them with intelligent, easy-to-use inventory management solutions.
               </p>
