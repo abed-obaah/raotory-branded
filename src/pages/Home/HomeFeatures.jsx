@@ -21,7 +21,7 @@ export default function HomeFeatures() {
                 </p>
                 {/* Button */}
                 <div className='flex mt-10'>
-                    <ButtonRoundedSolid text="Get Started" href="#" />
+                    <ButtonRoundedSolid text="Get Started" href="/account/register" />
                 </div>
             </div>
 

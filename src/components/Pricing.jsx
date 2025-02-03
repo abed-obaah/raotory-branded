@@ -164,7 +164,7 @@ export default function Pricing() {
 
                 <div className="mt-11">
                     <p className="text-xl font-semibold leading-6 text-center max-w-56 mx-auto">
-                        Contact <a href="#" className="text-blue-29a8f1">sales</a> to create store greater than 5
+                        Contact <a href="/contact" className="text-blue-29a8f1">sales</a> to create store greater than 5
                     </p>
                 </div>
             </div>
