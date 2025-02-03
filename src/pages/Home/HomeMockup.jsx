@@ -26,7 +26,7 @@ const HomeMockup = () => {
     <section className="max-w-6xl mx-auto mt-24">
       <div className="relative w-full h-[600px] flex justify-center items-center">
         {/* Images */}
-        <div className="relative w-full h-full">
+        <div className="relative w-full h-full mb-10">
           <motion.img
             src={images[0]}
             alt="First Image"
@@ -42,7 +42,7 @@ const HomeMockup = () => {
         </div>
 
         {/* Pagination */}
-        <div className="absolute -bottom-6 flex gap-2 justify-center w-full">
+        <div className="absolute bottom-0 flex gap-2 justify-center w-full">
           {images.map((_, index) => (
             <div
               key={index}
