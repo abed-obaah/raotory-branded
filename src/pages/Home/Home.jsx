@@ -19,7 +19,7 @@ export default function Home() {
             <HomeHero />
 
             {/* Mockup section */}
-            {/* <HomeMockup /> */}
+            <HomeMockup />
 
             {/* Top brands section */}
             {/* <TopBrands /> */}

@@ -23,8 +23,8 @@ const HomeMockup = () => {
   };
 
   return (
-    <section className="max-w-6xl mx-auto mt-24">
-      <div className="relative w-full h-[600px] flex justify-center items-center">
+    <section className="mt-16 max-w-6xl mx-auto">
+      <div className="relative w-full h-[240px] sm:h-[400px] md:h-[600px] flex justify-center items-center">
         {/* Images */}
         <div className="relative w-full h-full mb-10">
           <motion.img
@@ -46,7 +46,7 @@ const HomeMockup = () => {
           {images.map((_, index) => (
             <div
               key={index}
-              className={`h-2 w-8 rounded-full cursor-pointer ${activeIndex === index ? "bg-blue-500 w-16" : "bg-gray-400 w-6"}`}
+              className={`h-1.5 md:h-2 w-8 rounded-full cursor-pointer ${activeIndex === index ? "bg-blue-500 w-16" : "bg-gray-400 w-6"}`}
               onClick={() => handlePaginationClick(index)}
             />
           ))}
