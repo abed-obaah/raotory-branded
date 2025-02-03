@@ -98,7 +98,7 @@ export default function TestimonialCarousel() {
           {/* Left navigation button */}
           <button
             className={cn(
-              "absolute left-0 p-5 rounded-full transition-colors",
+              "absolute left-20 p-5 rounded-full transition-colors",
               index === 0
                 ? "bg-gray-300 text-black cursor-not-allowed"  // Disabled state
                 : "bg-blue-500 text-white hover:bg-blue-400",   // Active state
@@ -110,7 +110,7 @@ export default function TestimonialCarousel() {
             <FaChevronLeft size={24} />
           </button>
 
-          <div className="flex gap-10 justify-center items-center w-full">
+          <div className="flex gap-8 justify-center items-center w-full">
             {visibleTestimonials.map((testimonial, i) => {
               const isActive = testimonials.indexOf(testimonial) === index;
 
@@ -121,8 +121,8 @@ export default function TestimonialCarousel() {
                   src={testimonial.image}
                   alt={testimonial.name}
                   className={cn(
-                    "w-[120px] h-[120px] rounded-full cursor-pointer transition-all duration-300",
-                    isActive && "w-[150px] h-[150px] border-4 border-blue-500"
+                    "w-[100px] h-[100px] rounded-full cursor-pointer transition-all duration-300",
+                    isActive && "w-[130px] h-[130px] border-4 border-blue-500"
                   )}
                   onClick={() => setIndex(testimonials.indexOf(testimonial))}
                 />
@@ -133,7 +133,7 @@ export default function TestimonialCarousel() {
           {/* Right navigation button */}
           <button
             className={cn(
-              "absolute right-0 p-5 rounded-full transition-colors",
+              "absolute right-20 p-5 rounded-full transition-colors",
               index === testimonials.length - 1
                 ? "bg-gray-300 text-black cursor-not-allowed"  // Disabled state
                 : "bg-blue-500 text-white hover:bg-blue-400",   // Active state
@@ -156,7 +156,7 @@ export default function TestimonialCarousel() {
           className="mt-4"
         >
           {/* Client review */}
-          <p className="text-4xl text-gray-600 leading-12 font-normal">"{testimonials[index].review}"</p>
+          <p className="text-[2rem] text-gray-600 font-normal px-40">"{testimonials[index].review}"</p>
           {/* Stars */}
           <div className="flex justify-center mt-4 text-yellow-ffe26f text-[2.5rem] space-x-4">
             {Array(5)
