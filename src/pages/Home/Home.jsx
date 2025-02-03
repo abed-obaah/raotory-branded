@@ -10,7 +10,7 @@ import HomeMockup from "./HomeMockup";
 export default function Home() {
     return (
         <main>
-            {/* Navbar section */}
+            {/* Navbar */}
             <div className="md:mt-16">
                 <Navbar />
             </div>
@@ -34,7 +34,7 @@ export default function Home() {
             <Pricing />
 
             {/* Call to action section */}
-            {/* <HomeCallToAction /> */}
+            <HomeCallToAction />
 
         </main>
     )
