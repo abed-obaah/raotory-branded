@@ -30,14 +30,14 @@ export default function Pricing() {
     }, [isAnnual]);
 
     return (
-        <section id="pricing" className="max-w-6xl mx-auto mt-24">
+        <section id="pricing" className="section-px section-mt max-w-6xl mx-auto">
             <div>
                 {/* Heading */}
                 <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-                    <h2 className="text-3xl text-gray-600 opacity-50">Pricing</h2>
-                    <p className="mt-2 max-w-md mx-auto text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                    <p className="text-lg md:text-3xl text-gray-600 opacity-50">Pricing</p>
+                    <h2 className="mt-2 max-w-md mx-auto text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
                         Our Pricing Plans
-                    </p>
+                    </h2>
                 </div>
 
                 {/* Toggle Switch */}
@@ -73,7 +73,7 @@ export default function Pricing() {
                 </div>
 
                 {/* Pricing Cards */}
-                <div className="flex justify-center gap-12">
+                <div className="flex flex-col md:flex-row justify-center gap-10 md:gap-12">
                     {/* Single Store Pricing Card */}
                     <div className="flex flex-col p-6 max-w-[352px] text-gray-0d0d0d bg-white rounded-[20px] border border-black-10-percent shadow">
                         {/* Plan icon */}
@@ -163,7 +163,7 @@ export default function Pricing() {
                 </div>
 
                 <div className="mt-11">
-                    <p className="text-xl font-semibold leading-6 text-center max-w-56 mx-auto">
+                    <p className="text-base md:text-xl font-semibold leading-6 text-center max-w-56 mx-auto">
                         Contact <a href="/contact" className="text-blue-29a8f1">sales</a> to create store greater than 5
                     </p>
                 </div>

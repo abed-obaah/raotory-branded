@@ -31,7 +31,7 @@ export default function Home() {
             <TestimonialCarousel />
 
             {/* Pricing section */}
-            {/* <Pricing /> */}
+            <Pricing />
 
             {/* Call to action section */}
             {/* <HomeCallToAction /> */}
