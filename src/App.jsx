@@ -14,7 +14,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        {/* Nested Routes for Account */}
         <Route path="/account/*" element={<Account />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
