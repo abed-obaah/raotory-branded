@@ -4,27 +4,27 @@ import MockupForContactPage from "../../assets/mockup-for-contact-page.png";
 export default function ContactHero() {
 
   return (
-    <section className="bg-blue-0e90da">
+    <section className="bg-blue-0e90da pb-10 md:pb-0">
         {/* Section wrapper */}
-        <div className="flex flex-col gap-16 max-w-6xl mx-auto">
+        <div className="flex flex-col gap-10 md:gap-16 max-w-6xl mx-auto">
             {/* Navbar */}
-            <div className="pt-16 z-10">
+            <div className="md:pt-16 z-10">
                 <Navbar />
             </div>
             {/* Lower section */}
-            <div className="flex items-center gap-6 relative min-h-[24rem]">
+            <div className="flex flex-col md:flex-row items-center gap-10 md:gap-6 relative min-h-[24rem] px-4 md:px-0">
                 {/* Title */}
-                <div className="w-[40%]">
+                <div className="md:w-[40%]">
                     <p className="text-xl text-white-f8fdff font-medium">
                         Support
                     </p>
-                    <h2 className="mt-2 text-white-f8fdff text-[5rem] font-medium leading-[88px] tracking-tight">
+                    <h1 className="mt-2 text-5xl text-white-f8fdff lg:text-[5rem] font-medium lg:leading-[88px] tracking-tight">
                         How can we <span className="text-gray-300">help</span> you?
-                    </h2>
+                    </h1>
                 </div>
                 {/* Mockup image */}
-                <div className="">
-                    <div className="absolute top-0">
+                <div className="md:w-[60%]">
+                    <div className="md:absolute top-0">
                         <img 
                             src={MockupForContactPage} 
                             alt="Mockup image of Raotori's dashboard" 
