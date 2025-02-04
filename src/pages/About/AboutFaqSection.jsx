@@ -5,11 +5,11 @@ import AboutFaq from "./AboutFaq";
 
 export default function AboutFaqSection() {
   return (
-    <section className="max-w-6xl mx-auto mt-24">
-        <div className='flex justify-between gap-8'>
+    <section className="section-px section-mt max-w-6xl mx-auto">
+        <div className='flex flex-col lg:flex-row justify-between gap-8'>
             {/* Left section */}
             <div className="flex flex-col flex-1">
-                <h2 className="font-medium tracking-tight text-[4rem] leading-[70px] mb-12">
+                <h2 className="font-medium tracking-tight text-4xl md:text-5xl lg:text-[4rem] leading-[70px] mb-4 md:mb-6 lg:mb-12">
                     Need Help?
                 </h2>
                 {/* Phone */}
