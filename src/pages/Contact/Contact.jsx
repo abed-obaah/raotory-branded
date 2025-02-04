@@ -12,7 +12,7 @@ export default function Contact() {
             <ContactCard />
 
             {/* Contact form */}
-            {/* <ContactForm /> */}
+            <ContactForm />
         </main>
     )
 }

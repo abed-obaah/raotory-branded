@@ -6,7 +6,7 @@ export default function ContactForm() {
   const [agreed, setAgreed] = useState(false)
 
   return (
-    <div className="isolate bg-white px-6 mt-24 lg:px-8">
+    <div className="section-px section-mt bg-white px-6 lg:px-8">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
