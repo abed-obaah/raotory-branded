@@ -4,7 +4,7 @@ import MockupForContactPage from "../../assets/mockup-for-contact-page.png";
 export default function ContactHero() {
 
   return (
-    <section className="bg-blue-0e90da pb-10 md:pb-0">
+    <section className="bg-blue-0e90da pb-10 lg:pb-0">
         {/* Section wrapper */}
         <div className="flex flex-col gap-10 md:gap-16 max-w-6xl mx-auto">
             {/* Navbar */}
@@ -12,19 +12,19 @@ export default function ContactHero() {
                 <Navbar />
             </div>
             {/* Lower section */}
-            <div className="flex flex-col md:flex-row items-center gap-10 md:gap-6 relative min-h-[24rem] px-4 md:px-0">
+            <div className="section-px flex flex-col lg:flex-row items-center gap-10 lg:gap-6 min-h-[24rem]">
                 {/* Title */}
-                <div className="md:w-[40%]">
+                <div className="lg:w-[40%]">
                     <p className="text-xl text-white-f8fdff font-medium">
                         Support
                     </p>
-                    <h1 className="mt-2 text-5xl text-white-f8fdff lg:text-[5rem] font-medium lg:leading-[88px] tracking-tight">
+                    <h1 className="mt-2 text-white-f8fdff text-5xl md:text-6xl lg:text-[5rem] font-medium lg:leading-[88px] tracking-tight">
                         How can we <span className="text-gray-300">help</span> you?
                     </h1>
                 </div>
                 {/* Mockup image */}
                 <div className="md:w-[60%]">
-                    <div className="md:absolute top-0">
+                    <div className="lg:relative -bottom-10">
                         <img 
                             src={MockupForContactPage} 
                             alt="Mockup image of Raotori's dashboard" 
