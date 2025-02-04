@@ -24,7 +24,7 @@ export default function Register() {
                             type="text" 
                             name="name" 
                             id="name" 
-                            class="bg-white border border-black-10-percent text-blue-001b2a text-base rounded-[10px] focus:outline-none focus:ring-4 focus:ring-blue-300 block w-full p-5 dark:bg-white dark:border-black-10-percent dark:placeholder-gray-757575 dark:text-white" 
+                            class="bg-white border border-black-10-percent text-blue-001b2a text-base rounded-[10px] focus:outline-none focus:ring-4 focus:ring-blue-300 block w-full p-4 dark:bg-white dark:border-black-10-percent dark:placeholder-gray-757575 dark:text-white" 
                             placeholder="Full name" 
                             required 
                         />
@@ -35,7 +35,7 @@ export default function Register() {
                             type="email" 
                             name="email" 
                             id="email" 
-                            class="bg-white border border-black-10-percent text-blue-001b2a text-base rounded-[10px] focus:outline-none focus:ring-4 focus:ring-blue-300 block w-full p-5 dark:bg-white dark:border-black-10-percent dark:placeholder-gray-757575 dark:text-white" 
+                            class="bg-white border border-black-10-percent text-blue-001b2a text-base rounded-[10px] focus:outline-none focus:ring-4 focus:ring-blue-300 block w-full p-4 dark:bg-white dark:border-black-10-percent dark:placeholder-gray-757575 dark:text-white" 
                             placeholder="Email address" 
                             required 
                         />
@@ -46,7 +46,7 @@ export default function Register() {
                             type="password" 
                             name="password" 
                             id="password" 
-                            class="bg-white border border-black-10-percent text-blue-001b2a text-base rounded-[10px] focus:outline-none focus:ring-4 focus:ring-blue-300 block w-full p-5 dark:bg-white dark:border-black-10-percent dark:placeholder-gray-757575 dark:text-white" 
+                            class="bg-white border border-black-10-percent text-blue-001b2a text-base rounded-[10px] focus:outline-none focus:ring-4 focus:ring-blue-300 block w-full p-4 dark:bg-white dark:border-black-10-percent dark:placeholder-gray-757575 dark:text-white" 
                             placeholder="Password" 
                             required 
                         />
@@ -57,7 +57,7 @@ export default function Register() {
                             type="password" 
                             name="confirm-password" 
                             id="confirm-password" 
-                            class="bg-white border border-black-10-percent text-blue-001b2a text-base rounded-[10px] focus:outline-none focus:ring-4 focus:ring-blue-300 block w-full p-5 dark:bg-white dark:border-black-10-percent dark:placeholder-gray-757575 dark:text-white" 
+                            class="bg-white border border-black-10-percent text-blue-001b2a text-base rounded-[10px] focus:outline-none focus:ring-4 focus:ring-blue-300 block w-full p-4 dark:bg-white dark:border-black-10-percent dark:placeholder-gray-757575 dark:text-white" 
                             placeholder="Confirm password" 
                             required 
                         />
@@ -72,10 +72,10 @@ export default function Register() {
                         </div>
                     </div>
                     {/* Button */}
-                    <div className="mb-4">
+                    <div className="mb-4 mt-10">
                         <button
                             type="submit"
-                            className="flex w-full justify-center bg-gray-d9d9d9 focus:outline-none focus:ring-4 focus:ring-blue-300 font-semibold rounded-[10px] text-base p-5 text-center me-2"
+                            className="flex w-full justify-center bg-gray-d9d9d9 focus:outline-none focus:ring-4 focus:ring-blue-300 font-semibold rounded-[10px] text-base p-4 text-center me-2"
                         >
                             Continue
                         </button>
