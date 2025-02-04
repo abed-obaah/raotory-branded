@@ -9,7 +9,7 @@ export default function Contact() {
             <ContactHero />
 
             {/* Contact card section */}
-            {/* <ContactCard /> */}
+            <ContactCard />
 
             {/* Contact form */}
             {/* <ContactForm /> */}
