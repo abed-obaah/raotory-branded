@@ -3,7 +3,7 @@ import RaotoryLogoAndNameBlue from '../../assets/raotory-logo-name-blue.svg';
 export default function Register() {
     return (
       <section className='section-px'>
-        <div className="flex flex-col w-full max-w-[536px] mx-auto p-10.5 border border-black-10-percent rounded-3xl mt-16">
+        <div className="flex flex-col w-full max-w-[536px] mx-auto p-10.5 border border-black-10-percent rounded-3xl mt-10">
             
             {/* Heading */}
             <div className="mb-7">
