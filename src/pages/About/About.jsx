@@ -10,7 +10,7 @@ export default function About() {
     return (
         <main>
             {/* Navbar section */}
-            <div className="mt-16">
+            <div className="md:mt-16">
                 <Navbar />
             </div>
 

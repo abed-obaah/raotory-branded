@@ -84,10 +84,10 @@ export default function TestimonialCarousel() {
     <section className="section-px section-mt max-w-6xl mx-auto">
       {/* Heading */}
       <div className="mb-10">
-          <p className="text-lg md:text-3xl text-gray-600 opacity-50 text-center">
+          <p className="text-lg lg:text-3xl text-gray-600 opacity-50 text-center">
               Testimonials
           </p>
-          <h2 className="mt-2 max-w-3xl mx-auto text-4xl font-semibold tracking-tight text-pretty text-gray-900 text-center sm:text-5xl">
+          <h2 className="mt-2 max-w-3xl mx-auto text-4xl font-semibold tracking-tight text-pretty text-gray-900 text-center md:text-5xl">
             <span className="text-gray-600">See What Our</span> Raotory’s Loyal Customers <span className="text-gray-600">Are Saying</span>
           </h2>
       </div>
@@ -156,7 +156,7 @@ export default function TestimonialCarousel() {
           className="mt-4"
         >
           {/* Client review */}
-          <p className="mt-2 md:mt-0 text-xl md:text-[2rem] text-gray-600 font-normal md:px-40">"{testimonials[index].review}"</p>
+          <p className="mt-2 md:mt-0 text-xl md:text-[2rem] text-gray-600 font-normal lg:px-40">"{testimonials[index].review}"</p>
           {/* Stars */}
           <div className="flex justify-center mt-2 md:mt-4 text-yellow-ffe26f text-3xl md:text-[2.5rem] space-x-4">
             {Array(5)
@@ -166,9 +166,9 @@ export default function TestimonialCarousel() {
               ))}
           </div>
           {/* Client name */}
-          <p className="mt-2 md:mt-4 text-xl md:text-[2rem] font-bold">{testimonials[index].name}</p>
+          <p className="mt-2 lg:mt-4 text-xl lg:text-[2rem] font-bold">{testimonials[index].name}</p>
           {/* Client position */}
-          <p className="md:text-2xl text-gray-600">{testimonials[index].position}</p>
+          <p className="lg:text-2xl text-gray-600">{testimonials[index].position}</p>
         </motion.div>
       </div>
     </section>

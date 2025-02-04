@@ -11,7 +11,7 @@ export default function HomeFeatures() {
         <div className="flex flex-col lg:flex-row items-center gap-11.5">
             {/* Left side */}
             <div className="flex flex-col md:flex-1">
-                <p className="text-lg md:text-3xl text-gray-600 opacity-50">
+                <p className="text-lg lg:text-3xl text-gray-600 opacity-50">
                     Features
                 </p>
                 <h2 className="mt-2 max-w-md text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">

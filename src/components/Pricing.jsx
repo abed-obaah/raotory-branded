@@ -34,8 +34,8 @@ export default function Pricing() {
             <div>
                 {/* Heading */}
                 <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-                    <p className="text-lg md:text-3xl text-gray-600 opacity-50">Pricing</p>
-                    <h2 className="mt-2 max-w-md mx-auto text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                    <p className="text-lg lg:text-3xl text-gray-600 opacity-50">Pricing</p>
+                    <h2 className="mt-2 max-w-md mx-auto text-4xl font-semibold tracking-tight text-gray-900 lg:text-5xl">
                         Our Pricing Plans
                     </h2>
                 </div>
