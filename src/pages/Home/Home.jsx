@@ -1,3 +1,4 @@
+import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 import Pricing from "../../components/Pricing";
 import TestimonialCarousel from "../../components/TestimonialCarousel";
@@ -36,6 +37,8 @@ export default function Home() {
             {/* Call to action section */}
             <HomeCallToAction />
 
+            {/* Footer */}
+            <Footer />
         </main>
     )
 }

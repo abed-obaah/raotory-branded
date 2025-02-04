@@ -1,3 +1,4 @@
+import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 import TopBrands from "../../components/TopBrands";
 import AboutFaqSection from "./AboutFaqSection";
@@ -28,6 +29,9 @@ export default function About() {
 
             {/* FAQ section */}
             <AboutFaqSection />
+
+            {/* Footer */}
+            <Footer />
         </main>
     )
 }

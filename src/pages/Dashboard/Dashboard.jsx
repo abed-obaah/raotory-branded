@@ -1,11 +1,10 @@
-import Navbar from "../../components/Navbar";
+import DashboardLayout from "./DashboardLayout";
 
 export default function Dashboard() {
     return (
         <main>
-            {/* Navbar section */}
-            <Navbar />
-
+            {/* Dashboard layout */}
+            <DashboardLayout />
         </main>
     )
 }

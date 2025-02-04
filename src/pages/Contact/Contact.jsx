@@ -1,3 +1,4 @@
+import Footer from "../../components/Footer";
 import ContactCard from "./ContactCard";
 import ContactForm from "./ContactForm";
 import ContactHero from "./ContactHero";
@@ -13,6 +14,8 @@ export default function Contact() {
 
             {/* Contact form */}
             <ContactForm />
+
+            <Footer />
         </main>
     )
 }
