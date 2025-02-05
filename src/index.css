@@ -5,6 +5,7 @@
 
     --color-black-10-percent: rgba(0,0,0,0.1); /* Gray for borders */
     --color-blue-29a8f1: #29A8F1; /* Primary */
+    --color-blue-primary: #29A8F1; /* Primary */
     --color-blue-0e90da: #0E90DA; /* For hover, footer */
     --color-blue-001b2a: #001B2A; /* Primary, for dark text */
     --color-gray-757575: #757575; /* For gray text */

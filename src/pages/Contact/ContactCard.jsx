@@ -40,7 +40,7 @@ export default function ContactCard() {
                         <MdOutlineMarkEmailUnread className="size-5" />
                     </div>
                     <div class="">
-                        <div className="text-white-f8fdff text-lg font-medium">support@raotory.com.ng</div>
+                        <div className="text-white-f8fdff text-lg font-medium">support@raotory.com</div>
                         <div class="text-white-f8fdff text-sm font-medium">Support Email</div>
                     </div>
                 </div>
