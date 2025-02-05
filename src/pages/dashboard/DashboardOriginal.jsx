@@ -51,22 +51,8 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-const components = {
-  "Overview": () => <div>Overview Content</div>,
-  "Input Order": () => <InputOrder />,
-  "Create Customers": () => <div>Create Customers Content</div>,
-  "Stock Products": () => <div>Stock Products Content</div>,
-  "Returned Products": () => <div>Returned Products Content</div>,
-  "Inventory": () => <div>Inventory Content</div>,
-  "Invoice": () => <div>Invoice Content</div>,
-  "Settings": () => <div>Settings Content</div>,
-  "Help Center": () => <div>Help Center Content</div>,
-};
-
 export default function DashboardLayout() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [selectedComponent, setSelectedComponent] = useState("Overview");
-  const [isProductsOpen, setIsProductsOpen] = useState(false);
 
   return (
     <>
@@ -96,70 +82,30 @@ export default function DashboardLayout() {
                         <ul role="list" className="flex flex-1 flex-col gap-y-7">
                             
                             {/* Top sidebar menu items */}
-                            <li className="flex flex-1 flex-col">
-                                <ul className="space-y-1">
-                                    {[
-                                    { name: "Overview", icon: HomeIcon },
-                                    { name: "Input Order", icon: UsersIcon },
-                                    { name: "Create Customers", icon: FolderIcon },
-                                    ].map(({ name, icon: Icon }) => (
-                                    <li key={name}>
-                                        <button
-                                        onClick={() => setSelectedComponent(name)}
-                                        className={`flex items-center gap-x-3 p-2 text-sm font-semibold rounded-md w-full text-left ${
-                                            selectedComponent === name
-                                            ? "bg-blue-500 text-white"
-                                            : "text-gray-700 hover:bg-blue-500 hover:text-white"
-                                        }`}
+                            <li>
+                                <ul role="list" className="-mx-2 space-y-1">
+                                    {navigation.map((item) => (
+                                    <li key={item.name}>
+                                        <a
+                                        href={item.href}
+                                        className={classNames(
+                                            item.current
+                                            ? "bg-blue-29a8f1 text-white"
+                                            : "text-gray-757575 hover:bg-blue-29a8f1 hover:text-white",
+                                            "group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold"
+                                        )}
                                         >
-                                        <Icon className="size-6" /> {name}
-                                        </button>
-                                    </li>
-                                    ))}
-
-                                    {/* Products Submenu */}
-                                    <li>
-                                    <button
-                                        onClick={() => setIsProductsOpen(!isProductsOpen)}
-                                        className="flex items-center justify-between w-full p-2 text-sm font-semibold rounded-md text-left text-gray-700 hover:bg-blue-500 hover:text-white"
-                                    >
-                                        <span className="flex items-center gap-x-3">
-                                        <CalendarIcon className="size-6" /> Products
-                                        </span>
-                                        <ChevronDownIcon className={`size-5 transition-transform ${isProductsOpen ? "rotate-180" : "rotate-0"}`} />
-                                    </button>
-                                    {isProductsOpen && (
-                                        <ul className="ml-4 mt-1 space-y-1">
-                                        {["Stock Products", "Returned Products", "Inventory"].map((subItem) => (
-                                            <li key={subItem}>
-                                            <button
-                                                onClick={() => setSelectedComponent(subItem)}
-                                                className={`flex items-center gap-x-3 p-2 text-sm font-semibold rounded-md w-full text-left ${
-                                                selectedComponent === subItem
-                                                    ? "bg-blue-500 text-white"
-                                                    : "text-gray-700 hover:bg-blue-500 hover:text-white"
-                                                }`}
-                                            >
-                                                {subItem}
-                                            </button>
-                                            </li>
-                                        ))}
-                                        </ul>
-                                    )}
-                                    </li>
-
-                                    {[{ name: "Invoice", icon: DocumentDuplicateIcon }, { name: "Settings", icon: ChartPieIcon }].map(({ name, icon: Icon }) => (
-                                    <li key={name}>
-                                        <button
-                                        onClick={() => setSelectedComponent(name)}
-                                        className={`flex items-center gap-x-3 p-2 text-sm font-semibold rounded-md w-full text-left ${
-                                            selectedComponent === name
-                                            ? "bg-blue-500 text-white"
-                                            : "text-gray-700 hover:bg-blue-500 hover:text-white"
-                                        }`}
-                                        >
-                                        <Icon className="size-6" /> {name}
-                                        </button>
+                                        <item.icon
+                                            aria-hidden="true"
+                                            className={classNames(
+                                            item.current
+                                                ? "text-white"
+                                                : "text-gray-757575 group-hover:text-white",
+                                            "size-6 shrink-0"
+                                            )}
+                                        />
+                                        {item.name}
+                                        </a>
                                     </li>
                                     ))}
                                 </ul>
@@ -281,9 +227,11 @@ export default function DashboardLayout() {
                 </div>
                 
                 {/* Main content area */}
-                <main className="p-8">
-                    <div id="main-content-area">
-                        {components[selectedComponent] ? components[selectedComponent]() : <div>Not Found</div>}
+                <main className="py-10">
+                    <div id="main-content-area" className="px-4 sm:px-6 lg:px-8">
+                        {/* Your content */}
+                        <div className="hidden"><InputOrder /></div>
+                        
                     </div>
                 </main>
             </div>
