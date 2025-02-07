@@ -22,6 +22,9 @@
     --color-white-f8fdff: #F8FDFF;
 
     --color-green-008c38: #008C38;
+    --color-green-00B5484F: #00B5484F;
+    --color-red-ca0000: #CA0000;
+    --color-red-ca00001f: #CA00001F;
 
     --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
     --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
