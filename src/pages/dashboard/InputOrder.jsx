@@ -1,3 +1,8 @@
+import { GoGraph } from "react-icons/go";
+import { SlGraph } from "react-icons/sl";
+import { BsCalendar3 } from "react-icons/bs";
+import { BiDollar } from "react-icons/bi";
+import { BsBag } from "react-icons/bs";
 
 export default function InputOrder() {
     return (
@@ -5,7 +10,7 @@ export default function InputOrder() {
             {/* Main wrapper */}
             <div>
                 {/* Day selection section */}
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between mb-8">
                     {/* Day dropdown */}
                     <div>
                         <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
@@ -42,8 +47,75 @@ export default function InputOrder() {
                 </div>
 
                 {/* Statistics cards section */}
-                <div>
-
+                <div className="flex gap-10 w-full flex-wrap">
+                    {/* Today's sales */}
+                    <div className="border border-black-10-percent rounded-[20px] p-7.5 w-max shrink-0">
+                        <div className="flex items-center justify-center bg-[#E7F8FC] size-15 rounded-full mb-7.5">
+                            <GoGraph className="size-4" />
+                        </div>
+                        <div className="mb-4">
+                            <p className="text-gray-757575 text-base font-medium">Today's sales</p>
+                            <h4 className="text-black text-2xl font-bold">NGN 238,908.00</h4>
+                        </div>
+                        <div className="flex items-center gap-4.5">
+                            <div className="flex items-center">
+                                <SlGraph className="size-5 text-green-008c38" />
+                                <p className="text-green-008c38 text-sm font-medium">20%</p>
+                            </div>
+                            <p className="text-gray-757575 text-sm font-medium">Than last month</p>
+                        </div>
+                    </div>
+                    {/* No. of invoices issued */}
+                    <div className="border border-black-10-percent rounded-[20px] p-7.5 w-max shrink-0">
+                        <div className="flex items-center justify-center bg-[#F0E8FC] size-15 rounded-full mb-7.5">
+                            <BsCalendar3 className="size-4" />
+                        </div>
+                        <div className="mb-4">
+                            <p className="text-gray-757575 text-base font-medium">No. of invoices issued</p>
+                            <h4 className="text-black text-2xl font-bold">6,728</h4>
+                        </div>
+                        <div className="flex items-center gap-4.5">
+                            <div className="flex items-center">
+                                <SlGraph className="size-5 text-green-008c38" />
+                                <p className="text-green-008c38 text-sm font-medium">20%</p>
+                            </div>
+                            <p className="text-gray-757575 text-sm font-medium">Than last month</p>
+                        </div>
+                    </div>
+                    {/* Profit made */}
+                    <div className="border border-black-10-percent rounded-[20px] p-7.5 w-max shrink-0">
+                        <div className="flex items-center justify-center bg-[#FCF3EC] size-15 rounded-full mb-7.5">
+                            <BiDollar className="size-4" />
+                        </div>
+                        <div className="mb-4">
+                            <p className="text-gray-757575 text-base font-medium">Profit made</p>
+                            <h4 className="text-black text-2xl font-bold">NGN 238,908.00</h4>
+                        </div>
+                        <div className="flex items-center gap-4.5">
+                            <div className="flex items-center">
+                                <SlGraph className="size-5 text-green-008c38" />
+                                <p className="text-green-008c38 text-sm font-medium">20%</p>
+                            </div>
+                            <p className="text-gray-757575 text-sm font-medium">Than last month</p>
+                        </div>
+                    </div>
+                    {/* No. of products sold */}
+                    <div className="border border-black-10-percent rounded-[20px] p-7.5 w-max shrink-0">
+                        <div className="flex items-center justify-center bg-[#FCF3EC] size-15 rounded-full mb-7.5">
+                            <BsBag className="size-4" />
+                        </div>
+                        <div className="mb-4">
+                            <p className="text-gray-757575 text-base font-medium">No. of products sold</p>
+                            <h4 className="text-black text-2xl font-bold">90,000</h4>
+                        </div>
+                        <div className="flex items-center gap-4.5">
+                            <div className="flex items-center">
+                                <SlGraph className="size-5 text-green-008c38" />
+                                <p className="text-green-008c38 text-sm font-medium">20%</p>
+                            </div>
+                            <p className="text-gray-757575 text-sm font-medium">Than last month</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </>

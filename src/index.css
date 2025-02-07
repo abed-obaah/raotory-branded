@@ -21,6 +21,8 @@
     --color-yellow-ffe26f: #FFE26F;
     --color-white-f8fdff: #F8FDFF;
 
+    --color-green-008c38: #008C38;
+
     --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
     --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
   }
