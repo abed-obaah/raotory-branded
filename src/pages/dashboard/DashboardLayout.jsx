@@ -27,6 +27,7 @@ import {
 } from "@heroicons/react/20/solid";
 import RaotoryLogoAndNameBlue from "../../assets/raotory-logo-name-blue.svg";
 import InputOrder from "./InputOrder";
+import Inventory from "./Inventory";
 
 const navigation = [
   { name: "Overview", href: "#", icon: HomeIcon, current: true },
@@ -57,7 +58,7 @@ const components = {
   "Create Customers": () => <div>Create Customers Content</div>,
   "Stock Products": () => <div>Stock Products Content</div>,
   "Returned Products": () => <div>Returned Products Content</div>,
-  "Inventory": () => <div>Inventory Content</div>,
+  "Inventory": () => <Inventory />,
   "Invoice": () => <div>Invoice Content</div>,
   "Settings": () => <div>Settings Content</div>,
   "Help Center": () => <div>Help Center Content</div>,
