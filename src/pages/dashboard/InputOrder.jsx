@@ -119,7 +119,7 @@ export default function InputOrder() {
                 </div>
 
                 {/* Invoice section */}
-                <div>
+                <div className="flex gap-x-8">
                     {/* Left side */}
                     <div>
                         {/* Recent invoices */}
@@ -202,7 +202,46 @@ export default function InputOrder() {
                         </div>
                     </div>
                     {/* Right side */}
-                    <div></div>
+                    <div className="flex flex-col gap-y-8">
+                        {/* Customers pie chart */}
+                        <div className="sm:rounded-[20px] border border-black-10-percent p-6">Pie chart goes here</div>
+                        {/* Stock alert */}
+                        <div class="relative overflow-x-auto sm:rounded-[20px] border border-black-10-percent">
+                            <table class="w-full text-base text-left rtl:text-right text-blue-001b2a dark:text-blue-001b2a">
+                                <caption className="text-left text-black text-xl font-medium p-6">
+                                    Stock Alert
+                                </caption>
+                                <thead class="text-sm text-blue-001b2a bg-black-10-percent border-b border-black-10-percent dark:text-blue-001b2a">
+                                    <tr>
+                                        <th scope="col" class="px-6 py-3">
+                                            Product
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            Quantity
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="bg-white border-b border-black-10-percent hover:bg-black-10-percent">
+                                        <td class="px-6 py-2">
+                                            Sardine
+                                        </td>
+                                        <td class="px-6 py-2">
+                                            300
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white border-b border-black-10-percent hover:bg-black-10-percent">
+                                        <td class="px-6 py-2">
+                                            Fish
+                                        </td>
+                                        <td class="px-6 py-2">
+                                            250
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
 
             </div>
