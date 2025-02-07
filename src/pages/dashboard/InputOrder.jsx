@@ -160,7 +160,7 @@ export default function InputOrder() {
                                             NGN 30,000
                                         </td>
                                         <td class="px-6 py-2">
-                                            <a href="#" class="text-sm font-medium text-green-008c38 bg-green-00B5484F py-1 rounded-[63px] inline-block text-center w-full">Delivered</a>
+                                            <p class="text-sm font-medium text-green-008c38 bg-green-00B5484F py-1 px-3 rounded-[63px] inline-block text-center w-full">Delivered</p>
                                         </td>
                                     </tr>
                                     <tr class="bg-white border-b border-black-10-percent hover:bg-black-10-percent">
@@ -177,7 +177,7 @@ export default function InputOrder() {
                                             NGN 30,000
                                         </td>
                                         <td class="px-6 py-2">
-                                            <a href="#" class="text-sm font-medium text-blue-001b2a bg-black-10-percent py-1 rounded-[63px] inline-block text-center w-full">In progress</a>
+                                            <p class="text-sm font-medium text-blue-001b2a bg-black-10-percent py-1 px-3 rounded-[63px] inline-block text-center w-full">In progress</p>
                                         </td>
                                     </tr>
                                     <tr class="bg-white border-b border-black-10-percent hover:bg-black-10-percent">
@@ -194,7 +194,7 @@ export default function InputOrder() {
                                             NGN 30,000
                                         </td>
                                         <td class="px-6 py-2">
-                                            <a href="#" class="text-sm font-medium text-red-ca0000 bg-red-ca00001f py-1 rounded-[63px] inline-block text-center w-full">Returned</a>
+                                            <p class="text-sm font-medium text-red-ca0000 bg-red-ca00001f py-1 px-3 rounded-[63px] inline-block text-center w-full">Returned</p>
                                         </td>
                                     </tr>
                                 </tbody>
