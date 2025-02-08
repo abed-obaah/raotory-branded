@@ -236,7 +236,6 @@ export default function InputOrder() {
                         </div>
                     </div>
                 </div>
-
             </div>
         </>
     )

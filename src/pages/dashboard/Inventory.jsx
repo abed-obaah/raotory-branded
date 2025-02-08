@@ -1,4 +1,5 @@
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { IoIosArrowBack } from "react-icons/io";
 
 export default function Inventory() {
     return (
@@ -31,7 +32,7 @@ export default function Inventory() {
                     </form>
                 </div>
                 {/* Products table */}
-                <div class="relative overflow-x-auto border border-black-10-percent">
+                <div class="relative overflow-x-auto border border-black-10-percent mb-10">
                     <table class="w-full text-base text-left rtl:text-right text-blue-001b2a dark:text-blue-001b2a border-collapse">
                         <caption className="hidden text-left text-black text-xl font-medium p-6"></caption>
                         <thead class="text-sm text-white bg-dark-text-primary border-b border-black-10-percent dark:text-blue-001b2a">
@@ -101,6 +102,42 @@ export default function Inventory() {
                     </table>
                 </div>
 
+                {/* Edit product modal */}
+                <div className="bg-[#F8FDFF] p-8 max-w-[648px] mx-auto">
+                    {/* Title */}
+                    <a href="" className="flex items-center gap-2 text-blue-001b2a hover:text-blue-0e90da">
+                        <IoIosArrowBack className="size-5" />
+                        <span className="text-xl font-semibold">Edit Product</span>
+                    </a>
+
+                    {/* Product name */}
+                    <div className="sm:col-span-3 mt-7.5">
+                        <label htmlFor="product-name" className="block text-sm/6 font-normal text-gray-757575">
+                            Product name
+                        </label>
+                        <div className="mt-2">
+                            <input
+                                id="product-name"
+                                name="product-name"
+                                type="text"
+                                className="bg-white border border-black-10-percent text-blue-001b2a text-sm rounded-[10px] focus:outline-none focus:ring-4 focus:ring-blue-300 block w-full p-3 dark:bg-white dark:border-black-10-percent dark:text-blue-001b2a"
+                            />
+                        </div>
+                    </div>
+                    {/* Buttons */}
+                    <div className="flex justify-between mt-10">
+                        <button
+                            className="max-6-[168px] text-white text-base bg-blue-29a8f1 hover:bg-blue-0e90da focus:outline-none focus:ring-4 focus:ring-blue-300 font-semibold rounded-[10px] px-11 py-2.5"
+                        >
+                            Save
+                        </button>
+                        <button
+                            className="max-6-[168px] text-red-ca0000 text-base bg-red-ca00001f hover:bg-blue-0e90da focus:outline-none focus:ring-4 focus:ring-blue-300 font-semibold rounded-[10px] px-11 py-2.5"
+                        >
+                            Save
+                        </button>
+                    </div>
+                </div>
             </div>
         </>
     )

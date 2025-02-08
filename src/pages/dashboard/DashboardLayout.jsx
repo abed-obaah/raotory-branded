@@ -28,6 +28,7 @@ import {
 import RaotoryLogoAndNameBlue from "../../assets/raotory-logo-name-blue.svg";
 import InputOrder from "./InputOrder";
 import Inventory from "./Inventory";
+import Overview from "./Overview";
 
 const navigation = [
   { name: "Overview", href: "#", icon: HomeIcon, current: true },
@@ -53,7 +54,7 @@ function classNames(...classes) {
 }
 
 const components = {
-  "Overview": () => <div>Overview Content</div>,
+  "Overview": () => <Overview />,
   "Input Order": () => <InputOrder />,
   "Create Customers": () => <div>Create Customers Content</div>,
   "Stock Products": () => <div>Stock Products Content</div>,
