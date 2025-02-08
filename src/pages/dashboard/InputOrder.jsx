@@ -3,6 +3,7 @@ import { SlGraph } from "react-icons/sl";
 import { BsCalendar3 } from "react-icons/bs";
 import { BiDollar } from "react-icons/bi";
 import { BsBag } from "react-icons/bs";
+import { ChevronDownIcon } from '@heroicons/react/16/solid'
 
 export default function InputOrder() {
     return (
@@ -11,31 +12,23 @@ export default function InputOrder() {
             <div>
                 {/* Day selection section */}
                 <div className="flex items-center justify-between mb-8">
-                    
                     {/* Day dropdown */}
                     <div>
-                        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
-                            Today 
-                            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                            </svg>
-                        </button>
-                        {/* Dropdown menu */}
-                        <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
-                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-                            <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
-                            </li>
-                            </ul>
+                        <div className="mt-2 grid grid-cols-1">
+                            <select
+                                id="location"
+                                name="location"
+                                defaultValue="Canada"
+                                className="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                                >
+                                    <option>Today</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                            </select>
+                            <ChevronDownIcon
+                                aria-hidden="true"
+                                className="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4"
+                            />
                         </div>
                     </div>
                     {/* Description */}

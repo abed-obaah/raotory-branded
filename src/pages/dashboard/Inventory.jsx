@@ -56,7 +56,7 @@ export default function Inventory() {
                                 <td class="px-2.5 py-2">
                                     <div class="flex items-center">
                                         <p>NGN1,000,000</p>
-                                        <button className="ml-10 mr-6 bg-blue-0e90da px-4.5 py-1 rounded">Modify</button>
+                                        <button className="ml-10 mr-6 bg-blue-primary hover:bg-blue-0e90da px-4.5 py-1 rounded">Modify</button>
                                         <div className="bg-[#CA00001F] p-2 rounded-full">
                                             <RiDeleteBin6Line className="size-4 text-red-ca0000" />
                                         </div>
@@ -73,7 +73,7 @@ export default function Inventory() {
                                 <td class="px-2.5 py-2">
                                     <div class="flex items-center">
                                         <p>NGN1,000,000</p>
-                                        <button className="ml-10 mr-6 bg-blue-0e90da px-4.5 py-1 rounded">Modify</button>
+                                        <button className="ml-10 mr-6 bg-blue-primary hover:bg-blue-0e90da px-4.5 py-1 rounded">Modify</button>
                                         <div className="bg-[#CA00001F] p-2 rounded-full">
                                             <RiDeleteBin6Line className="size-4 text-red-ca0000" />
                                         </div>
@@ -90,7 +90,7 @@ export default function Inventory() {
                                 <td class="px-2.5 py-2">
                                     <div class="flex items-center">
                                         <p>NGN1,000,000</p>
-                                        <button className="ml-10 mr-6 bg-blue-0e90da px-4.5 py-1 rounded">Modify</button>
+                                        <button className="ml-10 mr-6 bg-blue-primary hover:bg-blue-0e90da px-4.5 py-1 rounded">Modify</button>
                                         <div className="bg-[#CA00001F] p-2 rounded-full">
                                             <RiDeleteBin6Line className="size-4 text-red-ca0000" />
                                         </div>
