@@ -35,9 +35,7 @@ import { CgList } from "react-icons/cg";
 import { PiScroll } from "react-icons/pi";
 import { TbHistory } from "react-icons/tb";
 import { LuCircleUserRound } from "react-icons/lu";
-import { TbHelpSquare } from "react-icons/tb";
 import { TbHelpSquareRounded } from "react-icons/tb";
-import { CgDarkMode } from "react-icons/cg";
 import { MdDarkMode } from "react-icons/md";
 import { HiLogout } from "react-icons/hi";
 
@@ -45,7 +43,7 @@ import RaotoryLogoAndNameBlue from "../../assets/raotory-logo-name-blue.svg";
 import InputOrder from "./InputOrder";
 import Inventory from "./Inventory";
 import Overview from "./Overview";
-import Onboarding from "./Onboarding";
+import OnboardingFlow from "./onboarding/OnboardingFlow";
 
 const navigation = [
   { name: "Onboarding", href: "#", icon: HomeIcon, current: false },
@@ -72,7 +70,7 @@ function classNames(...classes) {
 }
 
 const components = {
-  "Onboarding": () => <Onboarding />,
+  "Onboarding": () => <OnboardingFlow />,
   "Overview": () => <Overview />,
   "Input Order": () => <InputOrder />,
   "Stock Products": () => <div>Stock Products Content</div>,

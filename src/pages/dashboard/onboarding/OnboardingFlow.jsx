@@ -1,0 +1,36 @@
+import { useState } from "react";
+import OnboardingPricing from "./OnboardingPricing";
+import SingleStoreStep1 from "./SingleStoreStep1";
+import SingleStoreStep2 from "./SingleStoreStep2";
+import SingleStoreStep3 from "./SingleStoreStep3";
+import MultiStoreStep1 from "./MultiStoreStep1";
+import MultiStoreStep2 from "./MultiStoreStep2";
+import MultiStoreStep3 from "./MultiStoreStep3";
+
+export default function OnboardingFlow() {
+    const [step, setStep] = useState(0);
+    const [storeType, setStoreType] = useState(null);
+
+    const selectStoreType = (type) => {
+        setStoreType(type);
+        setStep(1);
+    };
+
+    const renderStep = () => {
+        if (step === 0) return <OnboardingPricing selectStoreType={selectStoreType} />;
+        if (storeType === "single") {
+            return [
+                <SingleStoreStep1 setStep={setStep} />,
+                <SingleStoreStep2 setStep={setStep} />,
+                <SingleStoreStep3 setStep={setStep} />
+            ][step - 1];
+        }
+        return [
+            <MultiStoreStep1 setStep={setStep} />,
+            <MultiStoreStep2 setStep={setStep} />,
+            <MultiStoreStep3 setStep={setStep} />
+        ][step - 1];
+    };
+
+    return <div>{renderStep()}</div>;
+}
