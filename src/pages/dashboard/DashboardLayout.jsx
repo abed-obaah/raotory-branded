@@ -75,11 +75,12 @@ const components = {
   "Onboarding": () => <Onboarding />,
   "Overview": () => <Overview />,
   "Input Order": () => <InputOrder />,
-  "Create Customers": () => <div>Create Customers Content</div>,
   "Stock Products": () => <div>Stock Products Content</div>,
   "Returned Products": () => <div>Returned Products Content</div>,
   "Inventory": () => <Inventory />,
   "Invoice": () => <div>Invoice Content</div>,
+  "Sales History": () => <div>Sales History content</div>,
+  "Create Customer": () => <div>Create Customer Content</div>,
   "Settings": () => <div>Settings Content</div>,
   "Help Center": () => <div>Help Center Content</div>,
 };
