@@ -1,10 +1,11 @@
 import { useState } from "react";
 
-export default function SingleStoreStep1({ setStep }) {
+export default function MultiStoreStep1({ setStep, setStoreCount }) {
     const [selectedStore, setSelectedStore] = useState(null);
 
     const handleSelect = (value) => {
         setSelectedStore(value);
+        setStoreCount(value); // Update store count in parent
     };
 
     return (

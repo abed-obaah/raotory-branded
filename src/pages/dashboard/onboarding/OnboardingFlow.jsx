@@ -10,6 +10,7 @@ import MultiStoreStep3 from "./MultiStoreStep3";
 export default function OnboardingFlow() {
     const [step, setStep] = useState(0);
     const [storeType, setStoreType] = useState(null);
+    const [storeCount, setStoreCount] = useState(1); // Default to 1 store
 
     const selectStoreType = (type) => {
         setStoreType(type);
@@ -26,8 +27,8 @@ export default function OnboardingFlow() {
             ][step - 1];
         }
         return [
-            <MultiStoreStep1 setStep={setStep} />,
-            <MultiStoreStep2 setStep={setStep} />,
+            <MultiStoreStep1 setStep={setStep} setStoreCount={setStoreCount} />,
+            <MultiStoreStep2 setStep={setStep} storeCount={storeCount} />,
             <MultiStoreStep3 setStep={setStep} />
         ][step - 1];
     };
