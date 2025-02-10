@@ -1,5 +1,6 @@
 import { useState } from "react";
-import {
+
+import { 
   Dialog,
   DialogBackdrop,
   DialogPanel,
@@ -9,6 +10,7 @@ import {
   MenuItems,
   TransitionChild,
 } from "@headlessui/react";
+
 import {
   Bars3Icon,
   BellIcon,
@@ -21,17 +23,33 @@ import {
   UsersIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
+
 import {
   ChevronDownIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/react/20/solid";
+
+import { BiSolidDashboard } from "react-icons/bi";
+import { HiOutlineShoppingCart } from "react-icons/hi";
+import { CgList } from "react-icons/cg";
+import { PiScroll } from "react-icons/pi";
+import { TbHistory } from "react-icons/tb";
+import { LuCircleUserRound } from "react-icons/lu";
+import { TbHelpSquare } from "react-icons/tb";
+import { TbHelpSquareRounded } from "react-icons/tb";
+import { CgDarkMode } from "react-icons/cg";
+import { MdDarkMode } from "react-icons/md";
+import { HiLogout } from "react-icons/hi";
+
 import RaotoryLogoAndNameBlue from "../../assets/raotory-logo-name-blue.svg";
 import InputOrder from "./InputOrder";
 import Inventory from "./Inventory";
 import Overview from "./Overview";
+import Onboarding from "./Onboarding";
 
 const navigation = [
-  { name: "Overview", href: "#", icon: HomeIcon, current: true },
+  { name: "Onboarding", href: "#", icon: HomeIcon, current: false },
+  { name: "Overview", href: "#", icon: BiSolidDashboard, current: true },
   { name: "Input Order", href: "#", icon: UsersIcon, current: false },
   { name: "Create Customers", href: "#", icon: FolderIcon, current: false },
   { name: "Products", href: "#", icon: CalendarIcon, current: false },
@@ -54,6 +72,7 @@ function classNames(...classes) {
 }
 
 const components = {
+  "Onboarding": () => <Onboarding />,
   "Overview": () => <Overview />,
   "Input Order": () => <InputOrder />,
   "Create Customers": () => <div>Create Customers Content</div>,
@@ -101,9 +120,10 @@ export default function DashboardLayout() {
                             <li className="flex flex-1 flex-col">
                                 <ul className="space-y-1">
                                     {[
-                                    { name: "Overview", icon: HomeIcon },
-                                    { name: "Input Order", icon: UsersIcon },
-                                    { name: "Create Customers", icon: FolderIcon },
+                                    { name: "Onboarding", icon: HomeIcon },
+                                    { name: "Overview", icon: BiSolidDashboard },
+                                    { name: "Input Order", icon: HiOutlineShoppingCart },
+
                                     ].map(({ name, icon: Icon }) => (
                                     <li key={name}>
                                         <button
@@ -121,48 +141,52 @@ export default function DashboardLayout() {
 
                                     {/* Products Submenu */}
                                     <li>
-                                    <button
-                                        onClick={() => setIsProductsOpen(!isProductsOpen)}
-                                        className="flex items-center justify-between w-full p-2 text-sm font-semibold rounded-md text-left text-gray-700 hover:bg-blue-500 hover:text-white"
-                                    >
-                                        <span className="flex items-center gap-x-3">
-                                        <CalendarIcon className="size-6" /> Products
-                                        </span>
-                                        <ChevronDownIcon className={`size-5 transition-transform ${isProductsOpen ? "rotate-180" : "rotate-0"}`} />
-                                    </button>
-                                    {isProductsOpen && (
-                                        <ul className="ml-4 mt-1 space-y-1">
-                                        {["Stock Products", "Returned Products", "Inventory"].map((subItem) => (
-                                            <li key={subItem}>
-                                            <button
-                                                onClick={() => setSelectedComponent(subItem)}
-                                                className={`flex items-center gap-x-3 p-2 text-sm font-semibold rounded-md w-full text-left ${
-                                                selectedComponent === subItem
-                                                    ? "bg-blue-500 text-white"
-                                                    : "text-gray-700 hover:bg-blue-500 hover:text-white"
-                                                }`}
-                                            >
-                                                {subItem}
-                                            </button>
-                                            </li>
-                                        ))}
-                                        </ul>
-                                    )}
+                                        <button
+                                            onClick={() => setIsProductsOpen(!isProductsOpen)}
+                                            className="flex items-center justify-between w-full p-2 text-sm font-semibold rounded-md text-left text-gray-700 hover:bg-blue-500 hover:text-white"
+                                        >
+                                            <span className="flex items-center gap-x-3">
+                                            <CgList className="size-6" /> Products
+                                            </span>
+                                            <ChevronDownIcon className={`size-5 transition-transform ${isProductsOpen ? "rotate-180" : "rotate-0"}`} />
+                                        </button>
+                                        {isProductsOpen && (
+                                            <ul className="ml-4 mt-1 space-y-1">
+                                            {["Stock Products", "Returned Products", "Inventory"].map((subItem) => (
+                                                <li key={subItem}>
+                                                <button
+                                                    onClick={() => setSelectedComponent(subItem)}
+                                                    className={`flex items-center gap-x-3 p-2 text-sm font-semibold rounded-md w-full text-left ${
+                                                    selectedComponent === subItem
+                                                        ? "bg-blue-500 text-white"
+                                                        : "text-gray-700 hover:bg-blue-500 hover:text-white"
+                                                    }`}
+                                                >
+                                                    {subItem}
+                                                </button>
+                                                </li>
+                                            ))}
+                                            </ul>
+                                        )}
                                     </li>
 
-                                    {[{ name: "Invoice", icon: DocumentDuplicateIcon }, { name: "Settings", icon: ChartPieIcon }].map(({ name, icon: Icon }) => (
-                                    <li key={name}>
-                                        <button
-                                        onClick={() => setSelectedComponent(name)}
-                                        className={`flex items-center gap-x-3 p-2 text-sm font-semibold rounded-md w-full text-left ${
-                                            selectedComponent === name
-                                            ? "bg-blue-500 text-white"
-                                            : "text-gray-700 hover:bg-blue-500 hover:text-white"
-                                        }`}
-                                        >
-                                        <Icon className="size-6" /> {name}
-                                        </button>
-                                    </li>
+                                    {[{ name: "Invoice", icon: PiScroll },
+                                        { name: "Sales History", icon: TbHistory },
+                                        { name: "Create Customer", icon: LuCircleUserRound },
+                                        { name: "Settings", icon: Cog6ToothIcon },
+                                        { name: "Help Center", icon: TbHelpSquareRounded }].map(({ name, icon: Icon }) => (
+                                        <li key={name}>
+                                            <button
+                                            onClick={() => setSelectedComponent(name)}
+                                            className={`flex items-center gap-x-3 p-2 text-sm font-semibold rounded-md w-full text-left ${
+                                                selectedComponent === name
+                                                ? "bg-blue-500 text-white"
+                                                : "text-gray-700 hover:bg-blue-500 hover:text-white"
+                                            }`}
+                                            >
+                                            <Icon className="size-6" /> {name}
+                                            </button>
+                                        </li>
                                     ))}
                                 </ul>
                             </li>
@@ -175,7 +199,7 @@ export default function DashboardLayout() {
                                     href="#"
                                     className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-757575 hover:bg-blue-29a8f1 hover:text-white"
                                 >
-                                    <Cog6ToothIcon
+                                    <MdDarkMode
                                     aria-hidden="true"
                                     className="size-6 shrink-0 text-gray-757575 group-hover:text-white"
                                     />
@@ -185,7 +209,7 @@ export default function DashboardLayout() {
                                     href="#"
                                     className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-757575 hover:bg-blue-29a8f1 hover:text-white"
                                 >
-                                    <Cog6ToothIcon
+                                    <HiLogout
                                     aria-hidden="true"
                                     className="size-6 shrink-0 text-gray-757575 group-hover:text-white"
                                     />
