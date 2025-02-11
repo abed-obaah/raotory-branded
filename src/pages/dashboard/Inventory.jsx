@@ -30,7 +30,7 @@ export default function Inventory() {
 
         {/* Edit Product Modal */}
         {editingProduct && (
-            <div className="fixed top-0 left-0 right-0 z-100 w-full h-full bg-gray-700/50 flex justify-center items-center">
+            <div className="fixed top-0 left-0 right-0 z-100 w-full h-full bg-gray-700/70 flex justify-center items-center">
                 <div className="bg-[#F8FDFF] p-8 w-full max-w-[548px] rounded-lg max-h-[90vh] overflow-y-auto">
                     <div className="flex items-center gap-2">
                         <IoIosArrowBack className="text-blue-001b2a text-xl cursor-pointer" onClick={closeEditModal} />
