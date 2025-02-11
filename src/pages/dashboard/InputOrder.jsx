@@ -88,13 +88,13 @@ export default function InputOrder() {
                             className='block w-full p-4 ps-4 text-base text-blue-001b2a border border-black-10-percent rounded-[10px] bg-white focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-white dark:border-black-10-percent dark:placeholder-gray-757575'
                         />
                         {filteredProducts.length > 0 && (
-                            <ul className='absolute w-full bg-white border mt-3 z-1'>
+                            <ul className='absolute w-full bg-white border border-black-10-percent p-3 mt-3 z-1 rounded-[15px] max-w-[596px]'>
                                 {filteredProducts.map((product) => (
                                     <li key={product.id} 
                                         onClick={() => addProductToTable(product)} 
-                                        className='cursor-pointer p-2 hover:bg-gray-100 flex justify-between'>
+                                        className='cursor-pointer p-2 hover:bg-[#E5E5E5] rounded flex justify-between'>
                                         <span>{product.name}</span>
-                                        <span>NGN {product.price}</span>
+                                        <span className='border-l border-black-10-percent pl-2'>NGN {product.price}</span>
                                     </li>
                                 ))}
                             </ul>
@@ -122,12 +122,12 @@ export default function InputOrder() {
 
                 {/* Product table */}
                 <div id='product-table' class="relative overflow-x-auto border border-black-10-percent mb-6">
-                    <table id="products-table" class="w-auto text-base text-left rtl:text-right text-blue-001b2a dark:text-blue-001b2a border-collapse">
+                    <table id="products-table" class="w-full text-base text-left rtl:text-right text-blue-001b2a dark:text-blue-001b2a border-collapse bg-amber-200">
                         <caption className="hidden text-left text-black text-xl font-medium p-6"></caption>
                         <thead class="text-sm text-white bg-dark-text-primary border-b border-black-10-percent dark:text-blue-001b2a">
                             <tr>
                                 <th className='px-2.5 py-3 border-r border-gray-757575'>S/N</th>
-                                <th className='px-2.5 py-3 border-r border-gray-757575'>Product Name</th>
+                                <th className='px-2.5 py-3 border-r border-gray-757575 min-w-[240px]'>Product Name</th>
                                 <th className='px-2.5 py-3 border-r border-gray-757575'>Cost Price</th>
                                 <th className='px-2.5 py-3 border-r border-gray-757575'>Selling Price</th>
                                 <th className='px-2.5 py-3 border-r border-gray-757575'>Quantity</th>
@@ -138,27 +138,34 @@ export default function InputOrder() {
                         <tbody>
                             {selectedProducts.map((product, index) => (
                                 <tr key={index} className='bg-white text-gray-757575 text-base'>
-                                    <td className='px-2.5 py-2 border-r border-black-10-percent'>{index + 1}</td>
-                                    <td className='px-2.5 py-2 border-r border-black-10-percent'>{product.name}</td>
-                                    <td className='px-2.5 py-2 border-r border-black-10-percent'>NGN {product.cost}</td>
-                                    <td className='px-2.5 py-2 border-r border-black-10-percent text-blue-001b2a'>
+                                    {/* Serial number */}
+                                    <td className='px-2.5 py-2 border-r border-b border-black-10-percent'>{index + 1}</td>
+                                    {/* Product name */}
+                                    <td className='px-2.5 py-2 border-r border-b border-black-10-percent'>{product.name}</td>
+                                    {/* Cost price */}
+                                    <td className='px-2.5 py-2 border-r border-b border-black-10-percent'>NGN {product.cost}</td>
+                                    {/* Selling price */}
+                                    <td className='px-2.5 py-2 border-r border-b border-black-10-percent text-blue-001b2a'>
                                         <input 
                                             type='number' 
                                             value={product.price} 
                                             onChange={(e) => updateProduct(index, 'price', parseFloat(e.target.value) || 0)}
-                                            className='border p-1 w-20'
+                                            className='p-1 w-20'
                                         />
                                     </td>
-                                    <td className='border p-2'>
+                                    {/* Quantity */}
+                                    <td className='border-r border-b border-black-10-percent p-2'>
                                         <input 
                                             type='number' 
                                             value={product.quantity} 
                                             onChange={(e) => updateProduct(index, 'quantity', parseInt(e.target.value) || 1)}
-                                            className='border p-1 w-20'
+                                            className='p-1 w-20'
                                         />
                                     </td>
-                                    <td className='border p-2'>NGN {product.total || product.price * product.quantity}</td>
-                                    <td className='border p-2'>
+                                    {/* Total */}
+                                    <td className='border-r border-b border-black-10-percent p-2'>NGN {product.total || product.price * product.quantity}</td>
+                                    {/* Action */}
+                                    <td className='border-r border-b border-black-10-percent p-2'>
                                         <button onClick={() => deleteProduct(index)} className='bg-[#CA00001F] p-2 rounded-full'>
                                             <RiDeleteBin6Line size={20} className='size-4 text-red-ca0000' />
                                         </button>
