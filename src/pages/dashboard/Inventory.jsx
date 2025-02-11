@@ -43,7 +43,7 @@ export default function Inventory() {
                             type="text"
                             value={editingProduct.name}
                             onChange={(e) => setEditingProduct({...editingProduct, name: e.target.value})}
-                            className="w-full p-4 border border-black-10-percent rounded-[10px] mt-1 bg-white text-blue-001b2a text-sm"
+                            className="w-full px-4 py-3 border border-black-10-percent rounded-[10px] mt-1 bg-white text-blue-001b2a text-sm"
                         />
                     </div>
 
@@ -54,7 +54,7 @@ export default function Inventory() {
                             type="number"
                             value={editingProduct.quantityStocked}
                             onChange={(e) => setEditingProduct({...editingProduct, quantityStocked: e.target.value})}
-                            className="w-full p-4 border border-black-10-percent rounded-[10px] mt-1 bg-white text-blue-001b2a text-sm"
+                            className="w-full px-4 py-3 border border-black-10-percent rounded-[10px] mt-1 bg-white text-blue-001b2a text-sm"
                         />
                     </div>
 
@@ -65,7 +65,7 @@ export default function Inventory() {
                             type="number"
                             value={editingProduct.quantitySold}
                             onChange={(e) => setEditingProduct({...editingProduct, quantitySold: e.target.value})}
-                            className="w-full p-4 border border-black-10-percent rounded-[10px] mt-1 bg-white text-blue-001b2a text-sm"
+                            className="w-full px-4 py-3 border border-black-10-percent rounded-[10px] mt-1 bg-white text-blue-001b2a text-sm"
                         />
                     </div>
 
@@ -76,7 +76,7 @@ export default function Inventory() {
                             type="date"
                             value={editingProduct.expiringDate || ""}
                             onChange={(e) => setEditingProduct({...editingProduct, expiringDate: e.target.value})}
-                            className="w-full p-4 border border-black-10-percent rounded-[10px] mt-1 bg-white text-blue-001b2a text-sm"
+                            className="w-full px-4 py-3 border border-black-10-percent rounded-[10px] mt-1 bg-white text-blue-001b2a text-sm"
                         />
                     </div>
 
@@ -87,7 +87,7 @@ export default function Inventory() {
                             type="text"
                             value={editingProduct.totalCostPrice}
                             onChange={(e) => setEditingProduct({...editingProduct, totalCostPrice: e.target.value})}
-                            className="w-full p-4 border border-black-10-percent rounded-[10px] mt-1 bg-white text-blue-001b2a text-sm"
+                            className="w-full px-4 py-3 border border-black-10-percent rounded-[10px] mt-1 bg-white text-blue-001b2a text-sm"
                         />
                     </div>
 
@@ -98,14 +98,14 @@ export default function Inventory() {
                             type="text"
                             value={editingProduct.totalRevenue}
                             onChange={(e) => setEditingProduct({...editingProduct, totalRevenue: e.target.value})}
-                            className="w-full p-4 border border-black-10-percent rounded-[10px] mt-1 bg-white text-blue-001b2a text-sm"
+                            className="w-full px-4 py-3 border border-black-10-percent rounded-[10px] mt-1 bg-white text-blue-001b2a text-sm"
                         />
                     </div>
 
                     {/* Buttons */}
                     <div className="mt-6 flex justify-between">
-                        <button className="bg-blue-primary hover:bg-blue-0e90da text-white px-11 py-2 rounded">Save</button>
-                        <button className="bg-red-ca00001f hover:bg-red-ca0000 text-red-ca0000 hover:text-white px-11 py-2 rounded" onClick={closeEditModal}>
+                        <button className="bg-blue-primary hover:bg-blue-0e90da text-white px-11 py-1.5 rounded">Save</button>
+                        <button className="bg-red-ca00001f hover:bg-red-ca0000 text-red-ca0000 hover:text-white px-11 py-1.5 rounded" onClick={closeEditModal}>
                             Cancel
                         </button>
                     </div>
