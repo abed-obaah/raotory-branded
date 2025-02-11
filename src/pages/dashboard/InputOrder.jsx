@@ -67,7 +67,7 @@ export default function InputOrder() {
                 </div>
 
                 {/* Product table */}
-                <div class="relative overflow-x-auto border border-black-10-percent mb-10">
+                <div class="relative overflow-x-auto border border-black-10-percent mb-6">
                     <table id="products-table" class="w-auto text-base text-left rtl:text-right text-blue-001b2a dark:text-blue-001b2a border-collapse">
                         <caption className="hidden text-left text-black text-xl font-medium p-6"></caption>
                         <thead class="text-sm text-white bg-dark-text-primary border-b border-black-10-percent dark:text-blue-001b2a">
@@ -106,6 +106,43 @@ export default function InputOrder() {
                             </tr>
                         </tbody>
                     </table>
+                </div>
+
+                {/* Payment type / total cost */}
+                <div className='flex items-end justify-between mb-9'>
+                    {/* Payment type */}
+                    <div className="grid grid-cols-1 w-[30%] h-max">
+                        <select
+                            id=""
+                            name=""
+                            defaultValue=""
+                            className="col-start-1 row-start-1 w-full appearance-none rounded-[10px] bg-white p-4 pr-10 pl-4 text-base text-gray-757575 outline-1 -outline-offset-1 outline-gray-300"
+                            >
+                                <option selected>Payment Type</option>
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                        </select>
+                        <ChevronDownIcon
+                            aria-hidden="true"
+                            className="pointer-events-none col-start-1 row-start-1 mr-4 size-5 self-center justify-self-end text-gray-500 sm:size-4"
+                        />
+                    </div>
+                    {/* Total cost */}
+                    <div className='flex flex-col bg-blue-001b2a p-2.5 w-max'>
+                        <p className='text-[#E5E5E5] text-base font-medium'>Total Cost</p>
+                        <h4 className='text-[#E5E5E5] text-2xl font-bold'>NGN 238,908.00</h4>
+                    </div>
+                </div>
+
+                {/* Buttons */}
+                <div className='flex items-center gap-6'>
+                    <button type="" class="w-[30%] text-white bg-blue-primary hover:bg-blue-0e90da focus:outline-none focus:ring-4 focus:ring-blue-300 rounded-[10px] text-base font-semibold px-5 py-3.5 min-w-[] dark:bg-blue-primary dark:hover:bg-blue-0e90da">
+                        Place On Hold
+                    </button>
+                    <button type="" class="w-[70%] text-white bg-blue-primary hover:bg-blue-0e90da focus:outline-none focus:ring-4 focus:ring-blue-300 rounded-[10px] text-base font-semibold px-5 py-3.5 min-w-[] dark:bg-blue-primary dark:hover:bg-blue-0e90da">
+                        Save & Issue Receipt
+                    </button>
                 </div>
             </div>
         </>
