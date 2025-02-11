@@ -57,7 +57,7 @@ export default function StockProduct() {
                     value={searchQuery} 
                     onChange={handleSearch} 
                     placeholder='Select Product' 
-                    className='border p-2 w-full rounded'
+                    className='block w-full p-4 ps-4 text-base text-blue-001b2a border border-black-10-percent rounded-[10px] bg-white focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-white dark:border-black-10-percent dark:placeholder-gray-757575'
                 />
                 {filteredProducts.length > 0 && (
                     <ul className='absolute w-full bg-white border mt-1'>
@@ -74,25 +74,25 @@ export default function StockProduct() {
             </div>
             
             {/* Product Table */}
-            <table className='w-full border-collapse border'>
-                <thead>
-                    <tr className='bg-gray-200'>
-                        <th className='border p-2'>S/N</th>
-                        <th className='border p-2'>Product Name</th>
-                        <th className='border p-2'>Cost Price</th>
-                        <th className='border p-2'>Selling Price</th>
-                        <th className='border p-2'>Quantity</th>
-                        <th className='border p-2'>Total</th>
-                        <th className='border p-2'>Action</th>
+            <table className='w-auto text-base text-left rtl:text-right text-blue-001b2a dark:text-blue-001b2a border-collapse'>
+                <thead class="text-sm text-white bg-dark-text-primary border-b border-black-10-percent dark:text-blue-001b2a">
+                    <tr>
+                        <th className='px-2.5 py-3 border-r border-gray-757575'>S/N</th>
+                        <th className='px-2.5 py-3 border-r border-gray-757575'>Product Name</th>
+                        <th className='px-2.5 py-3 border-r border-gray-757575'>Cost Price</th>
+                        <th className='px-2.5 py-3 border-r border-gray-757575'>Selling Price</th>
+                        <th className='px-2.5 py-3 border-r border-gray-757575'>Quantity</th>
+                        <th className='px-2.5 py-3 border-r border-gray-757575'>Total</th>
+                        <th className='px-2.5 py-3 border-r border-gray-757575'>Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     {selectedProducts.map((product, index) => (
-                        <tr key={index}>
-                            <td className='border p-2'>{index + 1}</td>
-                            <td className='border p-2'>{product.name}</td>
-                            <td className='border p-2'>NGN {product.cost}</td>
-                            <td className='border p-2'>
+                        <tr key={index} className='bg-white text-gray-757575 text-base'>
+                            <td className='px-2.5 py-2 border-r border-black-10-percent'>{index + 1}</td>
+                            <td className='px-2.5 py-2 border-r border-black-10-percent'>{product.name}</td>
+                            <td className='px-2.5 py-2 border-r border-black-10-percent'>NGN {product.cost}</td>
+                            <td className='px-2.5 py-2 border-r border-black-10-percent text-blue-001b2a'>
                                 <input 
                                     type='number' 
                                     value={product.price} 
@@ -110,8 +110,8 @@ export default function StockProduct() {
                             </td>
                             <td className='border p-2'>NGN {product.total || product.price * product.quantity}</td>
                             <td className='border p-2'>
-                                <button onClick={() => deleteProduct(index)} className='text-red-500'>
-                                    <RiDeleteBin6Line size={20} />
+                                <button onClick={() => deleteProduct(index)} className='bg-[#CA00001F] p-2 rounded-full'>
+                                    <RiDeleteBin6Line size={20} className='size-4 text-red-ca0000' />
                                 </button>
                             </td>
                         </tr>
