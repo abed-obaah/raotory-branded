@@ -31,7 +31,7 @@ export default function InputOrder() {
                 {/* Select product / Price type */}
                 <div className='flex gap-x-6.5 mb-10'>
                         {/* Select product */}
-                        <form className='w-[70%]'>   
+                        <form id='select-product' className='w-[70%]'>   
                             <div class="relative">
                                 {/* <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                                     <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -67,7 +67,7 @@ export default function InputOrder() {
                 </div>
 
                 {/* Product table */}
-                <div class="relative overflow-x-auto border border-black-10-percent mb-6">
+                <div id='product-table' class="relative overflow-x-auto border border-black-10-percent mb-6">
                     <table id="products-table" class="w-auto text-base text-left rtl:text-right text-blue-001b2a dark:text-blue-001b2a border-collapse">
                         <caption className="hidden text-left text-black text-xl font-medium p-6"></caption>
                         <thead class="text-sm text-white bg-dark-text-primary border-b border-black-10-percent dark:text-blue-001b2a">
@@ -131,7 +131,7 @@ export default function InputOrder() {
                     {/* Total cost */}
                     <div className='flex flex-col bg-blue-001b2a p-2.5 w-max'>
                         <p className='text-[#E5E5E5] text-base font-medium'>Total Cost</p>
-                        <h4 className='text-[#E5E5E5] text-2xl font-bold'>NGN 238,908.00</h4>
+                        <h4 id='total-cost' className='text-[#E5E5E5] text-2xl font-bold'>NGN 238,908.00</h4>
                     </div>
                 </div>
 
