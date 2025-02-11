@@ -44,6 +44,7 @@ import InputOrder from "./InputOrder";
 import Inventory from "./Inventory";
 import Overview from "./Overview";
 import OnboardingFlow from "./onboarding/OnboardingFlow";
+import StockProduct from "./StockProduct";
 
 const navigation = [
   { name: "Onboarding", href: "#", icon: HomeIcon, current: false },
@@ -73,7 +74,7 @@ const components = {
   "Onboarding": () => <OnboardingFlow />,
   "Overview": () => <Overview />,
   "Input Order": () => <InputOrder />,
-  "Stock Products": () => <div>Stock Products Content</div>,
+  "Stock Products": () => <div><StockProduct /></div>,
   "Returned Products": () => <div>Returned Products Content</div>,
   "Inventory": () => <Inventory />,
   "Invoice": () => <div>Invoice Content</div>,
