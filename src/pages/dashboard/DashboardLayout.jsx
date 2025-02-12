@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { 
   Dialog,
@@ -75,6 +75,13 @@ export default function DashboardLayout() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [selectedComponent, setSelectedComponent] = useState("Overview");
   const [isProductsOpen, setIsProductsOpen] = useState(false);
+
+  const [breadcrumb, setBreadcrumb] = useState([{ name: "Dashboard", href: "/" }]);
+
+  // Update breadcrumb when component changes
+  useEffect(() => {
+  setBreadcrumb([{ name: "Dashboard", href: "/" }, { name: selectedComponent, href: "#" }]);
+  }, [selectedComponent]);
 
   return (
     <>
@@ -379,27 +386,9 @@ export default function DashboardLayout() {
 
                         {/* Breadcrumb */}
                         <nav aria-label="Breadcrumb" className="flex flex-1">
-                            <ol role="list" className="flex items-center space-x-4">
-                                {pages.map((page, index) => (
-                                    <li key={page.name} className="flex items-center">
-                                        {index > 0 && (
-                                        <ChevronRightIcon
-                                            aria-hidden="true"
-                                            className="size-5 shrink-0 text-gray-400"
-                                        />
-                                        )}
-                                        <a
-                                            href={page.href}
-                                            aria-current={page.current ? 'page' : undefined}
-                                            className={`text-sm font-medium text-gray-500 hover:text-gray-700 ${
-                                                index > 0 ? 'ml-4' : ''
-                                            }`}
-                                            >
-                                            {page.name}
-                                        </a>
-                                    </li>
-                                ))}
-                            </ol>
+                            <span className="text-xl font-semibold text-dark-primary">
+                                {selectedComponent}
+                            </span>
                         </nav>
 
                         {/* Notification icon and profile dropdown */}
