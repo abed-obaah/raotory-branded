@@ -107,7 +107,7 @@ export default function DashboardLayout() {
                         </TransitionChild>
                         {/* Sidebar component, swap this element with another sidebar if you like */}
                         <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-4">
-                            <div className="flex h-16 shrink-0 items-center">
+                            <div className="flex h-16 shrink-0 items-center px-2">
                                 <a href="/" className="-m-1.5 p-1.5">
                                     <span className="sr-only">Raotory</span>
                                     <img
@@ -240,7 +240,7 @@ export default function DashboardLayout() {
                 <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-4 border-r border-black-10-percent">
                     
                     {/* Company logo */}
-                    <div className="flex h-16 shrink-0 items-center">
+                    <div className="flex h-16 shrink-0 items-center px-2">
                         <a href="/" className="-m-1.5 p-1.5">
                             <span className="sr-only">Raotory</span>
                             <img
