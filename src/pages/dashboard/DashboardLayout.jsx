@@ -52,29 +52,10 @@ const pages = [
     { name: 'Sub Location', href: '#', current: true },
 ]
 
-const navigation = [
-  { name: "Onboarding", href: "#", icon: HomeIcon, current: false },
-  { name: "Overview", href: "#", icon: BiSolidDashboard, current: true },
-  { name: "Input Order", href: "#", icon: UsersIcon, current: false },
-  { name: "Create Customers", href: "#", icon: FolderIcon, current: false },
-  { name: "Products", href: "#", icon: CalendarIcon, current: false },
-  { name: "Invoice", href: "#", icon: DocumentDuplicateIcon, current: false },
-  { name: "Settings", href: "#", icon: ChartPieIcon, current: false },
-  { name: "Help Center", href: "#", icon: ChartPieIcon, current: false },
-];
-const teams = [
-  { id: 1, name: "Heroicons", href: "#", initial: "H", current: false },
-  { id: 2, name: "Tailwind Labs", href: "#", initial: "T", current: false },
-  { id: 3, name: "Workcation", href: "#", initial: "W", current: false },
-];
 const userNavigation = [
   { name: "Your profile", href: "#" },
   { name: "Sign out", href: "#" },
 ];
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
 
 const components = {
   "Onboarding": () => <OnboardingFlow />,
