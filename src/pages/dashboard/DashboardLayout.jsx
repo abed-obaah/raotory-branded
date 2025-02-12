@@ -49,8 +49,7 @@ import StockProduct from "./StockProduct";
 
 // Breadcrumb array
 const pages = [
-    { name: 'Location', href: '#', current: false },
-    { name: 'Sub Location', href: '#', current: true },
+    { name: 'Component Name', href: '#', current: false },
 ]
 
 const userNavigation = [

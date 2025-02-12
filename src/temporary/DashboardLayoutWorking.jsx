@@ -41,11 +41,11 @@ import { MdDarkMode } from "react-icons/md";
 import { HiLogout } from "react-icons/hi";
 
 import RaotoryLogoAndNameBlue from "../../assets/raotory-logo-name-blue.svg";
-import InputOrder from "./InputOrder";
-import Inventory from "./Inventory";
-import Overview from "./Overview";
-import OnboardingFlow from "./onboarding/OnboardingFlow";
-import StockProduct from "./StockProduct";
+import InputOrder from "../pages/dashboard/InputOrder";
+import Inventory from "../pages/dashboard/Inventory";
+import Overview from "../pages/dashboard/Overview";
+import OnboardingFlow from "../pages/dashboard/onboarding/OnboardingFlow";
+import StockProduct from "../pages/dashboard/StockProduct";
 
 // Breadcrumb array
 const pages = [
