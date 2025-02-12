@@ -100,108 +100,150 @@ export default function DashboardLayout() {
         <div>
             {/* Dialog (for mobile) */}
             <Dialog open={sidebarOpen} onClose={setSidebarOpen} className="relative z-50 lg:hidden">
-            <DialogBackdrop
-                transition
-                className="fixed inset-0 bg-gray-900/80 transition-opacity duration-300 ease-linear data-closed:opacity-0"
-            />
+                <DialogBackdrop
+                    transition
+                    className="fixed inset-0 bg-gray-900/80 transition-opacity duration-300 ease-linear data-closed:opacity-0"
+                />
 
-            <div className="fixed inset-0 flex">
-                <DialogPanel
-                transition
-                className="relative mr-16 flex w-full max-w-xs flex-1 transform transition duration-300 ease-in-out data-closed:-translate-x-full"
-                >
-                <TransitionChild>
-                    <div className="absolute top-0 left-full flex w-16 justify-center pt-5 duration-300 ease-in-out data-closed:opacity-0">
-                    <button type="button" onClick={() => setSidebarOpen(false)} className="-m-2.5 p-2.5">
-                        <span className="sr-only">Close sidebar</span>
-                        <XMarkIcon aria-hidden="true" className="size-6 text-white" />
-                    </button>
-                    </div>
-                </TransitionChild>
-                {/* Sidebar component, swap this element with another sidebar if you like */}
-                <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-4">
-                    <div className="flex h-16 shrink-0 items-center">
-                    <img
-                        alt="Your Company"
-                        src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-                        className="h-8 w-auto"
-                    />
-                    </div>
-                    <nav className="flex flex-1 flex-col">
-                    <ul role="list" className="flex flex-1 flex-col gap-y-7">
-                        <li>
-                        <ul role="list" className="-mx-2 space-y-1">
-                            {navigation.map((item) => (
-                            <li key={item.name}>
-                                <a
-                                href={item.href}
-                                className={classNames(
-                                    item.current
-                                    ? 'bg-gray-50 text-indigo-600'
-                                    : 'text-gray-700 hover:bg-gray-50 hover:text-indigo-600',
-                                    'group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold',
-                                )}
-                                >
-                                <item.icon
-                                    aria-hidden="true"
-                                    className={classNames(
-                                    item.current ? 'text-indigo-600' : 'text-gray-400 group-hover:text-indigo-600',
-                                    'size-6 shrink-0',
-                                    )}
+                <div className="fixed inset-0 flex">
+                    <DialogPanel
+                    transition
+                    className="relative mr-16 flex w-full max-w-xs flex-1 transform transition duration-300 ease-in-out data-closed:-translate-x-full"
+                    >
+                    <TransitionChild>
+                        <div className="absolute top-0 left-full flex w-16 justify-center pt-5 duration-300 ease-in-out data-closed:opacity-0">
+                        <button type="button" onClick={() => setSidebarOpen(false)} className="-m-2.5 p-2.5">
+                            <span className="sr-only">Close sidebar</span>
+                            <XMarkIcon aria-hidden="true" className="size-6 text-white" />
+                        </button>
+                        </div>
+                    </TransitionChild>
+                    {/* Sidebar component, swap this element with another sidebar if you like */}
+                    <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-4">
+                        <div className="flex h-16 shrink-0 items-center">
+                            <a href="/" className="-m-1.5 p-1.5">
+                                <span className="sr-only">Raotory</span>
+                                <img
+                                alt="Raotory logo"
+                                src={RaotoryLogoAndNameBlue}
+                                className="h-5 w-auto"
                                 />
-                                {item.name}
-                                </a>
-                            </li>
-                            ))}
-                        </ul>
-                        </li>
-                        <li>
-                        <div className="text-xs/6 font-semibold text-gray-400">Your teams</div>
-                        <ul role="list" className="-mx-2 mt-2 space-y-1">
-                            {teams.map((team) => (
-                            <li key={team.name}>
-                                <a
-                                href={team.href}
-                                className={classNames(
-                                    team.current
-                                    ? 'bg-gray-50 text-indigo-600'
-                                    : 'text-gray-700 hover:bg-gray-50 hover:text-indigo-600',
-                                    'group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold',
-                                )}
-                                >
-                                <span
-                                    className={classNames(
-                                    team.current
-                                        ? 'border-indigo-600 text-indigo-600'
-                                        : 'border-gray-200 text-gray-400 group-hover:border-indigo-600 group-hover:text-indigo-600',
-                                    'flex size-6 shrink-0 items-center justify-center rounded-lg border bg-white text-[0.625rem] font-medium',
-                                    )}
-                                >
-                                    {team.initial}
-                                </span>
-                                <span className="truncate">{team.name}</span>
-                                </a>
-                            </li>
-                            ))}
-                        </ul>
-                        </li>
-                        <li className="mt-auto">
-                        <a
-                            href="#"
-                            className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-700 hover:bg-gray-50 hover:text-indigo-600"
-                        >
-                            <Cog6ToothIcon
-                            aria-hidden="true"
-                            className="size-6 shrink-0 text-gray-400 group-hover:text-indigo-600"
-                            />
-                            Settings
-                        </a>
-                        </li>
-                    </ul>
-                    </nav>
+                            </a>
+                        </div>
+                        <nav className="flex flex-1 flex-col">
+                            <ul role="list" className="flex flex-1 flex-col gap-y-7">
+
+                                {/* Top sidebar menu - mobile */}
+                                <li className="flex flex-1 flex-col">
+                                    <ul className="space-y-1">
+                                        {[
+                                        { name: "Onboarding", icon: HomeIcon },
+                                        { name: "Overview", icon: BiSolidDashboard },
+                                        { name: "Input Order", icon: HiOutlineShoppingCart },
+
+                                        ].map(({ name, icon: Icon }) => (
+                                        <li key={name}>
+                                            <button
+                                            onClick={() => setSelectedComponent(name)}
+                                            className={`flex items-center gap-x-3 p-2 text-sm font-semibold rounded-md w-full text-left ${
+                                                selectedComponent === name
+                                                ? "bg-blue-500 text-white"
+                                                : "text-gray-700 hover:bg-blue-500 hover:text-white"
+                                            }`}
+                                            >
+                                            <Icon className="size-6" /> {name}
+                                            </button>
+                                        </li>
+                                        ))}
+
+                                        {/* Products Submenu */}
+                                        <li>
+                                            <button
+                                                onClick={() => setIsProductsOpen(!isProductsOpen)}
+                                                className="flex items-center justify-between w-full p-2 text-sm font-semibold rounded-md text-left text-gray-700 hover:bg-blue-500 hover:text-white"
+                                            >
+                                                <span className="flex items-center gap-x-3">
+                                                <CgList className="size-6" /> Products
+                                                </span>
+                                                <ChevronDownIcon className={`size-5 transition-transform ${isProductsOpen ? "rotate-180" : "rotate-0"}`} />
+                                            </button>
+                                            {isProductsOpen && (
+                                                <ul className="ml-4 mt-1 space-y-1">
+                                                {["Stock Products", "Returned Products", "Inventory"].map((subItem) => (
+                                                    <li key={subItem}>
+                                                    <button
+                                                        onClick={() => setSelectedComponent(subItem)}
+                                                        className={`flex items-center gap-x-3 p-2 text-sm font-semibold rounded-md w-full text-left ${
+                                                        selectedComponent === subItem
+                                                            ? "bg-blue-500 text-white"
+                                                            : "text-gray-700 hover:bg-blue-500 hover:text-white"
+                                                        }`}
+                                                    >
+                                                        {subItem}
+                                                    </button>
+                                                    </li>
+                                                ))}
+                                                </ul>
+                                            )}
+                                        </li>
+
+                                        {[{ name: "Invoice", icon: PiScroll },
+                                            { name: "Sales History", icon: TbHistory },
+                                            { name: "Create Customer", icon: LuCircleUserRound },
+                                            { name: "Settings", icon: Cog6ToothIcon },
+                                            { name: "Help Center", icon: TbHelpSquareRounded }].map(({ name, icon: Icon }) => (
+                                            <li key={name}>
+                                                <button
+                                                onClick={() => setSelectedComponent(name)}
+                                                className={`flex items-center gap-x-3 p-2 text-sm font-semibold rounded-md w-full text-left ${
+                                                    selectedComponent === name
+                                                    ? "bg-blue-500 text-white"
+                                                    : "text-gray-700 hover:bg-blue-500 hover:text-white"
+                                                }`}
+                                                >
+                                                <Icon className="size-6" /> {name}
+                                                </button>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </li>
+
+                                {/* Middle sidebar menu - mobile - removed from here*/}
+                                
+                                {/* Bottom sidebar menu - mobile */}
+                                <li className="mt-auto">
+                                    <ul className="">
+                                        <li className="px-2">
+                                            <a
+                                                href="#"
+                                                className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-757575 hover:bg-blue-29a8f1 hover:text-white"
+                                            >
+                                                <MdDarkMode
+                                                    aria-hidden="true"
+                                                    className="size-6 shrink-0 text-gray-757575 group-hover:text-white"
+                                                />
+                                                Dark Mode
+                                            </a>
+                                        </li>
+                                        <li className="px-2">
+                                            <a
+                                                href="#"
+                                                className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-757575 hover:bg-blue-29a8f1 hover:text-white"
+                                            >
+                                                <HiLogout
+                                                    aria-hidden="true"
+                                                    className="size-6 shrink-0 text-gray-757575 group-hover:text-white"
+                                                />
+                                                Logout
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    </DialogPanel>
                 </div>
-                </DialogPanel>
-            </div>
             </Dialog>
 
             {/* Static sidebar for desktop */}
@@ -305,26 +347,32 @@ export default function DashboardLayout() {
 
                             {/* Bottom sidebar menu items */}
                             <li className="mt-auto">
-                                <a
-                                    href="#"
-                                    className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-757575 hover:bg-blue-29a8f1 hover:text-white"
-                                >
-                                    <MdDarkMode
-                                    aria-hidden="true"
-                                    className="size-6 shrink-0 text-gray-757575 group-hover:text-white"
-                                    />
-                                    Dark Mode
-                                </a>
-                                <a
-                                    href="#"
-                                    className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-757575 hover:bg-blue-29a8f1 hover:text-white"
-                                >
-                                    <HiLogout
-                                    aria-hidden="true"
-                                    className="size-6 shrink-0 text-gray-757575 group-hover:text-white"
-                                    />
-                                    Logout
-                                </a>
+                                <ul className="">
+                                    <li className="px-2">
+                                        <a
+                                            href="#"
+                                            className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-757575 hover:bg-blue-29a8f1 hover:text-white"
+                                        >
+                                            <MdDarkMode
+                                                aria-hidden="true"
+                                                className="size-6 shrink-0 text-gray-757575 group-hover:text-white"
+                                            />
+                                            Dark Mode
+                                        </a>
+                                    </li>
+                                    <li className="px-2">
+                                        <a
+                                            href="#"
+                                            className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-757575 hover:bg-blue-29a8f1 hover:text-white"
+                                        >
+                                            <HiLogout
+                                                aria-hidden="true"
+                                                className="size-6 shrink-0 text-gray-757575 group-hover:text-white"
+                                            />
+                                            Logout
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </nav>
