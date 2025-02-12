@@ -27,6 +27,7 @@ import {
 import {
   ChevronDownIcon,
   MagnifyingGlassIcon,
+  ChevronRightIcon,
 } from "@heroicons/react/20/solid";
 
 import { BiSolidDashboard } from "react-icons/bi";
@@ -45,6 +46,11 @@ import Inventory from "./Inventory";
 import Overview from "./Overview";
 import OnboardingFlow from "./onboarding/OnboardingFlow";
 import StockProduct from "./StockProduct";
+
+const pages = [
+    { name: 'Location', href: '#', current: false },
+    { name: 'Sub Location', href: '#', current: true },
+]
 
 const navigation = [
   { name: "Onboarding", href: "#", icon: HomeIcon, current: false },
@@ -229,22 +235,34 @@ export default function DashboardLayout() {
                     {/* Separator (for mobile) removed from here*/}
                     
                     {/* Dashboard notification bar */}
-                    <div className="flex flex-1 gap-x-4 self-stretch lg:gap-x-6">
+                    <div className="flex flex-1 items-center gap-x-4 self-stretch lg:gap-x-6">
                         
-                        {/* Search */}
-                        <form action="#" method="GET" className="grid flex-1 grid-cols-1">
-                            <input
-                            name="search"
-                            type="search"
-                            placeholder="Search"
-                            aria-label="Search"
-                            className="col-start-1 row-start-1 block size-full bg-white pl-8 text-base text-gray-900 outline-hidden placeholder:text-gray-400 sm:text-sm/6"
-                            />
-                            <MagnifyingGlassIcon
-                            aria-hidden="true"
-                            className="pointer-events-none col-start-1 row-start-1 size-5 self-center text-gray-400"
-                            />
-                        </form>
+                        {/* Search removed from here, replaced with breadcrumb */}
+
+                        {/* Breadcrumb */}
+                        <nav aria-label="Breadcrumb" className="flex flex-1">
+                            <ol role="list" className="flex items-center space-x-4">
+                                {pages.map((page, index) => (
+                                    <li key={page.name} className="flex items-center">
+                                        {index > 0 && (
+                                        <ChevronRightIcon
+                                            aria-hidden="true"
+                                            className="size-5 shrink-0 text-gray-400"
+                                        />
+                                        )}
+                                        <a
+                                            href={page.href}
+                                            aria-current={page.current ? 'page' : undefined}
+                                            className={`text-sm font-medium text-gray-500 hover:text-gray-700 ${
+                                                index > 0 ? 'ml-4' : ''
+                                            }`}
+                                            >
+                                            {page.name}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ol>
+                        </nav>
 
                         {/* Notification icon and profile dropdown */}
                         <div className="flex items-center gap-x-4 lg:gap-x-6">
