@@ -10,5 +10,4 @@ export default defineConfig({
       '@': '/src', // Optional alias
     },
   },
-  base: './', // Force relative paths
 });
