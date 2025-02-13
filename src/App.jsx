@@ -1,11 +1,10 @@
-import './App.css';
+import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Home from "./pages/home";
-import Home from "@/pages/home/Home.jsx";
-import About from "@/pages/about/About.jsx";
-import Contact from "@/pages/contact/Contact.jsx";
-import Account from "@/pages/account/Account.jsx";
-import Dashboard from "@/pages/dashboard/Dashboard.jsx";
+import Home from "./pages/home/Home.jsx";
+import About from "./pages/about/About.jsx";
+import Contact from "./pages/contact/Contact.jsx";
+import Account from "./pages/account/Account.jsx";
+import Dashboard from "./pages/dashboard/Dashboard.jsx";
 
 function App() {
   return (
